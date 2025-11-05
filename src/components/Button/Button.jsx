@@ -1,0 +1,37 @@
+const changeVariant = (variant) => {
+  switch (variant) {
+    case "primary":
+      return `
+        relative overflow-hidden bg-[#0ab9d1]/65 text-white
+        before:absolute before:inset-0 before:bg-gradient-to-r before:from-[#0ab9d1]/50 before:to-[#0ab9d1]
+        before:-translate-y-full before:transition-transform before:duration-300
+        hover:before:-translate-y-0 before:rounded-full
+      `;
+    case "secondary":
+      return `relative overflow-hidden bg-#fff]
+        before:absolute before:inset-0 before:bg-gradient-to-t before:from-[#fff]/80 before:to-[#fff]
+        before:-translate-y-full before:transition-transform before:duration-300
+        hover:before:-translate-y-0 before:rounded-full hover:text-black border-[1px] border-white`;
+    default:
+      return "";
+  }
+};
+
+function Button({ children, variant = "primary", ...props }) {
+  const variantClasses = changeVariant(variant);
+  const baseClasses =
+    "p-4  rounded-full cursor-pointer font-semibold font-montserrat focus:outline-none group";
+
+  const combinedClasses = `${baseClasses} ${variantClasses}`;
+
+  return (
+    <button className={combinedClasses} {...props}>
+      {/* Garante que o texto fique acima do pseudo-elemento */}
+      <span className="relative items-center z-20 flex flex-row gap-2">
+        {children}
+      </span>
+    </button>
+  );
+}
+
+export default Button;

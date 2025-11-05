@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+  .ajuste-s8 {
+    transform: translateY(7%); /* mais estável que margin-top gigante */
+    /* ou usar um valor fixo menor:
+       margin-top: -6rem;
+    */
+  }
+}
