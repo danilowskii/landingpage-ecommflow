@@ -68,28 +68,11 @@ export default function main() {
               autoPlay
               muted
               loop
+              playsInline
+              webkit-playsinline
               className="object-cover w-svw h-auto"
               src={techBackground}
             ></video>
-            {/*<div
-              style={{
-                width: "100%",
-                height: "50svh",
-                position: "relative",
-                zIndex: "-1",
-              }}
-            >
-              <Particles
-                particleColors={["#0ab9d1", "#fff"]}
-                particleCount={200}
-                particleSpread={10}
-                speed={0.1}
-                particleBaseSize={100}
-                moveParticlesOnHover={true}
-                alphaParticles={false}
-                disableRotation={false}
-              />
-            </div>*/}
           </div>
 
           <div className="flex  flex-col text-center items-center absolute inset-0 z-20 text-white/90  text-xl">

@@ -33,24 +33,84 @@ export const MacbookScroll = ({ src, showGradient, title, badge }) => {
   });
 
   const [isMobile, setIsMobile] = useState(false);
+  const [isSmallPcScreen, setIsSmallPcScreen] = useState(false);
+  const [orientation, setOrientation] = useState(0); // novo estado
 
   useEffect(() => {
-    if (window && window.innerWidth < 768) {
-      setIsMobile(true);
+    if (typeof window !== "undefined") {
+      const handleDeviceDetection = () => {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        // lê o ângulo real
+        let angle = 0;
+        if (window.screen?.orientation?.angle !== undefined) {
+          angle = window.screen.orientation.angle;
+        } else if (typeof window.orientation === "number") {
+          angle = window.orientation;
+        }
+
+        const currentOrientation = angle === 90 || angle === -90 ? 90 : 0;
+        setOrientation(currentOrientation);
+
+        // detecta Nest e variações
+        const isNest =
+          (width >= 960 && width <= 1280 && height >= 600 && height <= 800) ||
+          /Nest|Hub Max/i.test(navigator.userAgent);
+
+        if (width < 768) {
+          setIsMobile(true);
+          setIsSmallPcScreen(false);
+        } else if (
+          (width >= 768 && width <= 1366 && currentOrientation === 0) ||
+          isNest
+        ) {
+          setIsMobile(false);
+          setIsSmallPcScreen(true);
+        } else {
+          setIsMobile(false);
+          setIsSmallPcScreen(false);
+        }
+      };
+
+      handleDeviceDetection();
+      window.addEventListener("resize", handleDeviceDetection);
+      window.addEventListener("orientationchange", handleDeviceDetection);
+      return () => {
+        window.removeEventListener("resize", handleDeviceDetection);
+        window.removeEventListener("orientationchange", handleDeviceDetection);
+      };
     }
   }, []);
 
+  // animações
   const scaleX = useTransform(
     scrollYProgress,
     [0, 0.3],
-    [1.2, isMobile ? 1 : 1.5]
+    [1.2, isMobile ? 1.4 : 1.5]
   );
+
   const scaleY = useTransform(
     scrollYProgress,
     [0, 0.3],
-    [0.6, isMobile ? 1 : 1.5]
+    [0.6, isMobile ? 1.4 : 1.5]
   );
-  const translate = useTransform(scrollYProgress, [0, 1], [0, 1500]);
+
+  // lógica ajustada conforme sua regra
+  const translate = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [
+      0,
+      isMobile
+        ? 1500
+        : orientation === 90 // tela deitada
+        ? 100
+        : isSmallPcScreen // tela em pé (iPad vertical)
+        ? 1000
+        : 1500, // desktop
+    ]
+  );
   const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
   const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
