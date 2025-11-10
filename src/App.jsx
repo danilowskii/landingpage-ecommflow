@@ -1,4 +1,3 @@
-import headEcomm from "./assets/head-ecomm1.png";
 import logoWhiteEcomm from "./assets/logo-white-ecomm.png";
 import Button from "./components/Button";
 import amazon from "./assets/amazon.png";
@@ -20,6 +19,7 @@ import whatsappLogo from "./assets/whastapp.png";
 import plus from "./assets/plus.png";
 import techBackground from "./assets/tech-background.mp4";
 import techBackgroundImage from "./assets/tech-background.png";
+import { IconBorderRadius } from "@tabler/icons-react";
 
 export default function main() {
   const imageLogos = [
@@ -69,7 +69,7 @@ export default function main() {
               muted
               loop
               playsInline
-              webkit-playsinline
+              webkit-playsinline="true"
               className="object-cover w-svw h-auto"
               src={techBackground}
             ></video>
@@ -127,7 +127,7 @@ export default function main() {
               fadeOut
               fadeOutColor="black"
               ariaLabel="Technology partners"
-              className="bg-linear-to-r min-h-[200px] sm:max-w-full from-black/10 via-transparent to-black/10"
+              className="bg-linear-to-r min-h-[200px]  sm:max-w-full from-black/10 via-transparent to-black/10"
             />
           </div>
         </div>
@@ -331,6 +331,7 @@ export default function main() {
           </div>
         </div>
       </section>
+
       <Footer />
     </main>
   );
