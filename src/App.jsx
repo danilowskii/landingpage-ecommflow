@@ -18,8 +18,7 @@ import Whastapp from "./components/Whatsapp";
 import whatsappLogo from "./assets/whastapp.png";
 import plus from "./assets/plus.png";
 import techBackground from "./assets/tech-background.mp4";
-import techBackgroundImage from "./assets/tech-background.png";
-import { IconBorderRadius } from "@tabler/icons-react";
+import techBackgroundImage1 from "./assets/tech-background1.png";
 
 export default function main() {
   const imageLogos = [
@@ -51,7 +50,7 @@ export default function main() {
   ];
 
   return (
-    <main className="bg-linear-to-r from-[#000] via-[#030405] to-[#000] min-h-screen">
+    <main className="bg-linear-to-r from-black via-[#030405] to-black min-h-screen">
       <div className="max-w-36 hover:scale-110 transition-all duration-300 z-100 sm:max-w-44 fixed bottom-5 right-[-25px] sm:right-0">
         <a
           target="_blank"
@@ -62,15 +61,20 @@ export default function main() {
       </div>
       <section id="inicio">
         <div className="">
-          <div className="inset-0 max-h-[400px] overflow-hidden opacity-60 flex mx-auto object-cover">
+          <div className="inset-0 md:mb-[300px] max-h-[250px] overflow-hidden opacity-60 flex mx-auto object-cover">
+            <img
+              src={techBackgroundImage1}
+              alt=""
+              className="sm:hidden block"
+            />
             <video
-              poster={techBackgroundImage}
+              poster={techBackgroundImage1}
               autoPlay
               muted
               loop
               playsInline
               webkit-playsinline="true"
-              className="object-cover w-svw h-auto"
+              className="object-cover hidden sm:block w-svw  "
               src={techBackground}
             ></video>
           </div>
@@ -302,7 +306,7 @@ export default function main() {
           </a>
           <h3 className="mx-auto pb-20 px-8 font-bold text-center text-4xl sm:text-5xl text-white/90">
             Confiança que{" "}
-            <span className="text-[#0ab9d1] font-bold">gera resultados</span>
+            <span className="text-[#08dffc] font-bold">gera resultados</span>
           </h3>
           <div>
             <Metrics />

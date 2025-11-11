@@ -2,8 +2,8 @@ const changeVariant = (variant) => {
   switch (variant) {
     case "primary":
       return `
-        relative overflow-hidden bg-[#0ab9d1]/65 text-white
-        before:absolute before:inset-0 before:bg-gradient-to-r before:from-[#0ab9d1]/50 before:to-[#0ab9d1]
+        relative overflow-hidden bg-[#0ab9d1]/45 text-white
+        before:absolute before:inset-0 before:bg-gradient-to-r before:from-[#0ab9d1]/40 via-[#0ab9d1]/60 before:to-[#0ab9d1]
         before:-translate-y-full before:transition-transform before:duration-300
         hover:before:-translate-y-0 before:rounded-full
       `;

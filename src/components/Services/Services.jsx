@@ -58,7 +58,7 @@ export default function Services() {
         {ourServices.map((service, index) => (
           <div
             key={index}
-            className="hover:scale-110 transition-all duration-300"
+            className="hover:scale-110 hover:shadow-[0px_0px_20px_rgba(10,185,209,0.3)] rounded-lg transition-all duration-300"
           >
             <a
               target="_blank"

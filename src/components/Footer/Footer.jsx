@@ -83,7 +83,7 @@ export default function Footer() {
           © 2025 EcommFlow. Todos os direitos reservados.
         </div>
         <p className="text-gray-400 text-center text-sm">
-          Developed by{" "}
+          Desenvolvido por{" "}
           <a target="_blank" href="https://www.linkedin.com/in/paivadanilo/">
             Danilo
           </a>
