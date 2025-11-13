@@ -19,6 +19,10 @@ import whatsappLogo from "./assets/whastapp.png";
 import plus from "./assets/plus.png";
 import techBackground from "./assets/tech-background.mp4";
 import techBackgroundImage1 from "./assets/tech-background1.png";
+import ScrollRevealFromBottom from "./components/ScrollReveal/FromBottom/";
+import ScrollRevealFromRight from "./components/ScrollReveal/FromRight/";
+import ScrollRevealFromLeft from "./components/ScrollReveal/FromLeft/";
+import ScrollRevealFromTop from "./components/ScrollReveal/FromTop/";
 
 export default function main() {
   const imageLogos = [
@@ -90,6 +94,7 @@ export default function main() {
               Nós cuidamos dos seus anúncios, enquanto você cuida do seu
               negócio!
             </p>
+
             <div className="flex flex-row gap-3 sm:gap-8 sm:flex ">
               <a
                 className="text-sm sm:text-xl"
@@ -176,39 +181,41 @@ export default function main() {
               />
             </div>
           </div>
-          <div className="z-50">
-            <h3 className="text-white/90 gap-2 font-bold flex justify-center text-4xl sm:text-5xl py-20">
-              Nossos <span className="text-[#0ab9d1]">Serviços</span>
-            </h3>
-            <div className="">
-              <Services />
-            </div>
-            <p className="text-white/90 max-w-[95%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl py-10 justify-center">
-              Nossa abordagem estratégica garante que cada produto e anúncio
-              trabalhe para{" "}
-              <span className="text-[#0ab9d1] font-bold">
-                gerar resultados reais.
-              </span>{" "}
-              <span className="text-[#0ab9d1] font-bold">
-                Simplificamos decisões complexas
-              </span>{" "}
-              e{" "}
-              <span className="text-[#0ab9d1] font-bold">
-                potencializamos o desempenho
-              </span>{" "}
-              do seu marketplace, aumentando a confiança do cliente e o{" "}
-              <span className="text-[#0ab9d1] font-bold">
-                faturamento do seu negócio.
-              </span>
-            </p>
-            <div className="flex justify-center text-2xl items-center py-8">
-              <a
-                target="_blank"
-                href="https://wa.me/5511966052171?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20assessoria%20Ecommflow...%20%23ECOMMFLOW"
-              >
-                <Button variant="primary">Quero garantir agora!</Button>
-              </a>
-            </div>
+          <div className="z-50 overflow-hidden">
+            <ScrollRevealFromBottom>
+              <h3 className="text-white/90 gap-2 font-bold flex justify-center text-4xl sm:text-5xl py-20">
+                Nossos <span className="text-[#0ab9d1]">Serviços</span>
+              </h3>
+              <div className="">
+                <Services />
+              </div>
+              <p className="text-white/90 max-w-[95%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl py-10 justify-center">
+                Nossa abordagem estratégica garante que cada produto e anúncio
+                trabalhe para{" "}
+                <span className="text-[#0ab9d1] font-bold">
+                  gerar resultados reais.
+                </span>{" "}
+                <span className="text-[#0ab9d1] font-bold">
+                  Simplificamos decisões complexas
+                </span>{" "}
+                e{" "}
+                <span className="text-[#0ab9d1] font-bold">
+                  potencializamos o desempenho
+                </span>{" "}
+                do seu marketplace, aumentando a confiança do cliente e o{" "}
+                <span className="text-[#0ab9d1] font-bold">
+                  faturamento do seu negócio.
+                </span>
+              </p>
+              <div className="flex justify-center text-2xl items-center py-8">
+                <a
+                  target="_blank"
+                  href="https://wa.me/5511966052171?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20assessoria%20Ecommflow...%20%23ECOMMFLOW"
+                >
+                  <Button variant="primary">Quero garantir agora!</Button>
+                </a>
+              </div>
+            </ScrollRevealFromBottom>
           </div>
         </div>
       </section>
@@ -253,20 +260,26 @@ export default function main() {
             />
           </div>
         </div>
-        <h2 className="text-white/90 gap-2 font-bold text-center text-4xl sm:text-5xl py-20">
-          Antes e depois da <span className="text-[#0ab9d1]">Ecomm Flow</span>
-        </h2>
-        <CompareDemo />
-        <p className="text-white/90 max-w-[95%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl py-10 justify-center">
-          Nossos{" "}
-          <span className="text-[#0ab9d1] font-bold">designs estratégicos</span>{" "}
-          unem estética e performance, transformando cada anúncio em uma
-          oportunidade de venda. Uma{" "}
-          <span className="text-[#0ab9d1] font-bold">apresentação forte</span> e
-          <span className="text-[#0ab9d1] font-bold"> coerente</span> que{" "}
-          <span className="text-[#0ab9d1] font-bold">diferencia sua marca</span>{" "}
-          no marketplace.
-        </p>
+        <ScrollRevealFromRight>
+          <h2 className="text-white/90 gap-2 font-bold text-center text-4xl sm:text-5xl py-20">
+            Antes e depois da <span className="text-[#0ab9d1]">Ecomm Flow</span>
+          </h2>
+          <CompareDemo />
+          <p className="text-white/90 max-w-[95%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl py-10 justify-center">
+            Nossos{" "}
+            <span className="text-[#0ab9d1] font-bold">
+              designs estratégicos
+            </span>{" "}
+            unem estética e performance, transformando cada anúncio em uma
+            oportunidade de venda. Uma{" "}
+            <span className="text-[#0ab9d1] font-bold">apresentação forte</span>{" "}
+            e<span className="text-[#0ab9d1] font-bold"> coerente</span> que{" "}
+            <span className="text-[#0ab9d1] font-bold">
+              diferencia sua marca
+            </span>{" "}
+            no marketplace.
+          </p>
+        </ScrollRevealFromRight>
       </section>
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40 flex mx-auto object-cover">
@@ -289,35 +302,37 @@ export default function main() {
             />
           </div>
         </div>
-        <div
-          id="final"
-          className="max-w-[95%] z-100 sm:max-w-[70%] mx-auto rounded-4xl mb-20 relative overflow-hidden flex flex-col bg-linear-to-br from-[#0ab9d1]/1 via-[#0ab9d1]/50 to-[#0ab9d1]/10 py-20"
-        >
-          <a
-            target="_blank"
-            className="flex pb-10 self-center"
-            href="https://wa.me/5511966052171?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20assessoria%20Ecommflow...%20%23ECOMMFLOW"
+        <ScrollRevealFromLeft>
+          <div
+            id="final"
+            className="max-w-[95%] z-100 sm:max-w-[70%] mx-auto rounded-4xl mb-20 relative overflow-hidden flex flex-col bg-linear-to-br from-[#0ab9d1]/1 via-[#0ab9d1]/50 to-[#0ab9d1]/10 py-20"
           >
-            <img
-              src={logoWhiteEcomm}
-              className="hover:scale-110 transition-all duration-300 w-100"
-              alt=""
-            />
-          </a>
-          <h3 className="mx-auto pb-20 px-8 font-bold text-center text-4xl sm:text-5xl text-white/90">
-            Confiança que{" "}
-            <span className="text-[#08dffc] font-bold">gera resultados</span>
-          </h3>
-          <div>
-            <Metrics />
+            <a
+              target="_blank"
+              className="flex pb-10 self-center"
+              href="https://wa.me/5511966052171?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20assessoria%20Ecommflow...%20%23ECOMMFLOW"
+            >
+              <img
+                src={logoWhiteEcomm}
+                className="hover:scale-110 transition-all duration-300 w-100"
+                alt=""
+              />
+            </a>
+            <h3 className="mx-auto pb-20 px-8 font-bold text-center text-4xl sm:text-5xl text-white/90">
+              Confiança que{" "}
+              <span className="text-[#08dffc] font-bold">gera resultados</span>
+            </h3>
+            <div>
+              <Metrics />
+            </div>
+            <p className="text-white/90 max-w-[80%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl pt-10 justify-center">
+              Performance que entrega lucro. Mais do que promessas, <br />{" "}
+              <span className="text-[#0ab9d1] font-bold">
+                resultados mensuráveis e duradouros.
+              </span>
+            </p>
           </div>
-          <p className="text-white/90 max-w-[80%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl pt-10 justify-center">
-            Performance que entrega lucro. Mais do que promessas, <br />{" "}
-            <span className="text-[#0ab9d1] font-bold">
-              resultados mensuráveis e duradouros.
-            </span>
-          </p>
-        </div>
+        </ScrollRevealFromLeft>
       </section>
       <section id="contato">
         <div className="">
