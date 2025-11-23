@@ -17,12 +17,8 @@ import Particles from "./components/Particles";
 import Whastapp from "./components/Whatsapp";
 import whatsappLogo from "./assets/whastapp.png";
 import plus from "./assets/plus.png";
-import techBackground from "./assets/tech-background.mp4";
-import techBackgroundImage1 from "./assets/tech-background1.png";
 import ScrollRevealFromBottom from "./components/ScrollReveal/FromBottom/";
-import ScrollRevealFromRight from "./components/ScrollReveal/FromRight/";
-import ScrollRevealFromLeft from "./components/ScrollReveal/FromLeft/";
-import ScrollRevealFromTop from "./components/ScrollReveal/FromTop/";
+import LinkedLines from "./components/LinkedLines/LinkedLines.jsx";
 
 export default function main() {
   const imageLogos = [
@@ -63,34 +59,22 @@ export default function main() {
           <Whastapp />
         </a>
       </div>
-      <section id="inicio">
+      <section id="inicio" className="md:pb-44">
         <div className="">
-          <div className="inset-0 md:mb-[300px] max-h-[250px] overflow-hidden opacity-60 flex mx-auto object-cover">
-            <img
-              src={techBackgroundImage1}
-              alt=""
-              className="sm:hidden block"
-            />
-            <video
-              poster={techBackgroundImage1}
-              autoPlay
-              muted
-              loop
-              playsInline
-              webkit-playsinline="true"
-              className="object-cover hidden sm:block w-svw  "
-              src={techBackground}
-            ></video>
+          <div className="relative inset-0 h-[400px] overflow-hidden flex mx-auto bg-linear-to-t  from-black to-[#010e1d]">
+            <LinkedLines />
           </div>
 
-          <div className="flex  flex-col text-center items-center absolute inset-0 z-20 text-white/90  text-xl">
-            <img className="w-60  py-10 h-auto filter" src={logoWhiteEcomm} />
-            <p className="text-3xl sm:text-5xl max-w-[95%] font-bold font-montserrat">
-              Vamos colocar a{" "}
-              <span className="text-[#0ab9d1]">MÃO NA MASSA</span> em seu
-              marketplace
+          <div className="flex flex-col text-center items-center absolute inset-0 z-20 text-white/90  text-xl">
+            <img className="w-80  py-10 h-auto filter" src={logoWhiteEcomm} />
+            <p className="text-3xl pb-10 md:pb-0 sm:text-5xl max-w-[95%] font-bold font-montserrat">
+              Vamos colocar a <br />
+              <span class="text-4xl md:text-6xl font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
+                MÃO NA MASSA
+              </span>
+              <br /> em seu marketplace
             </p>
-            <p className="py-10 sm:py-20 text-xl sm:text-2xl font-semibold px-4">
+            <p className="pb-10 sm:py-20 text-xl sm:text-2xl font-semibold px-4">
               Nós cuidamos dos seus anúncios, enquanto você cuida do seu
               negócio!
             </p>
@@ -120,7 +104,7 @@ export default function main() {
               </a>
             </div>
 
-            <p className="py-10  sm:text-2xl max-w-[95%] font-semibold">
+            <p className="py-10 sm:text-2xl max-w-[95%] font-semibold">
               Atendemos os{" "}
               <span className="text-[#0ab9d1]">principais marketplaces</span> do
               país!
@@ -260,7 +244,7 @@ export default function main() {
             />
           </div>
         </div>
-        <ScrollRevealFromRight>
+        <ScrollRevealFromBottom>
           <h2 className="text-white/90 gap-2 font-bold text-center text-4xl sm:text-5xl py-20">
             Antes e depois da <span className="text-[#0ab9d1]">Ecomm Flow</span>
           </h2>
@@ -279,7 +263,7 @@ export default function main() {
             </span>{" "}
             no marketplace.
           </p>
-        </ScrollRevealFromRight>
+        </ScrollRevealFromBottom>
       </section>
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40 flex mx-auto object-cover">
@@ -302,7 +286,7 @@ export default function main() {
             />
           </div>
         </div>
-        <ScrollRevealFromLeft>
+        <ScrollRevealFromBottom>
           <div
             id="final"
             className="max-w-[95%] z-100 sm:max-w-[70%] mx-auto rounded-4xl mb-20 relative overflow-hidden flex flex-col bg-linear-to-br from-[#0ab9d1]/1 via-[#0ab9d1]/50 to-[#0ab9d1]/10 py-20"
@@ -332,7 +316,7 @@ export default function main() {
               </span>
             </p>
           </div>
-        </ScrollRevealFromLeft>
+        </ScrollRevealFromBottom>
       </section>
       <section id="contato">
         <div className="">

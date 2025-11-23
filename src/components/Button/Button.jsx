@@ -2,7 +2,7 @@ const changeVariant = (variant) => {
   switch (variant) {
     case "primary":
       return `
-        relative overflow-hidden bg-[#0ab9d1]/45 text-white
+        relative overflow-hidden shadow-md bg-linear-to-r from-blue-500 via-sky-500 to-cyan-600 text-white
         before:absolute before:inset-0 before:bg-gradient-to-r before:from-[#0ab9d1]/40 via-[#0ab9d1]/60 before:to-[#0ab9d1]
         before:-translate-y-full before:transition-transform before:duration-300
         hover:before:-translate-y-0 before:rounded-full
@@ -20,7 +20,7 @@ const changeVariant = (variant) => {
 function Button({ children, variant = "primary", ...props }) {
   const variantClasses = changeVariant(variant);
   const baseClasses =
-    "p-4  rounded-full cursor-pointer font-semibold font-montserrat focus:outline-none group";
+    "p-4 transition-colors  rounded-full cursor-pointer font-semibold font-montserrat focus:outline-none group";
 
   const combinedClasses = `${baseClasses} ${variantClasses}`;
 
