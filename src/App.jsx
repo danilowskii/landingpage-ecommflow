@@ -67,9 +67,9 @@ export default function main() {
 
           <div className="flex flex-col text-center items-center absolute inset-0 z-20 text-white/90  text-xl">
             <img className="w-80  py-10 h-auto filter" src={logoWhiteEcomm} />
-            <p className="text-3xl pb-10 md:pb-0 sm:text-5xl max-w-[95%] font-bold font-montserrat">
+            <p className="text-3xl leading-14 pb-10 md:pb-0 sm:text-5xl max-w-[95%] font-bold font-montserrat">
               Vamos colocar a <br />
-              <span class="text-4xl md:text-6xl font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
+              <span class="text-4xl md:text-7xl font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                 MÃO NA MASSA
               </span>
               <br /> em seu marketplace
@@ -106,7 +106,7 @@ export default function main() {
 
             <p className="py-10 sm:text-2xl max-w-[95%] font-semibold">
               Atendemos os{" "}
-              <span className="text-[#0ab9d1]">principais marketplaces</span> do
+              <span className="text-[#00e1ff]">principais marketplaces</span> do
               país!
             </p>
             <LogoLoop
@@ -167,8 +167,11 @@ export default function main() {
           </div>
           <div className="z-50 overflow-hidden">
             <ScrollRevealFromBottom>
-              <h3 className="text-white/90 gap-2 font-bold flex justify-center text-4xl sm:text-5xl py-20">
-                Nossos <span className="text-[#0ab9d1]">Serviços</span>
+              <h3 className="text-white/90 gap-2 font-bold flex justify-center text-4xl sm:text-5xl  py-20">
+                Nossos{" "}
+                <p class="font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
+                  Serviços
+                </p>
               </h3>
               <div className="">
                 <Services />
@@ -246,7 +249,10 @@ export default function main() {
         </div>
         <ScrollRevealFromBottom>
           <h2 className="text-white/90 gap-2 font-bold text-center text-4xl sm:text-5xl py-20">
-            Antes e depois da <span className="text-[#0ab9d1]">Ecomm Flow</span>
+            Antes e depois da{" "}
+            <span class="font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
+              Ecomm Flow
+            </span>
           </h2>
           <CompareDemo />
           <p className="text-white/90 max-w-[95%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl py-10 justify-center">
@@ -304,7 +310,9 @@ export default function main() {
             </a>
             <h3 className="mx-auto pb-20 px-8 font-bold text-center text-4xl sm:text-5xl text-white/90">
               Confiança que{" "}
-              <span className="text-[#08dffc] font-bold">gera resultados</span>
+              <span class="font-bold bg-linear-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
+                gera resultados
+              </span>
             </h3>
             <div>
               <Metrics />

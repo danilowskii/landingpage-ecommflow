@@ -10,11 +10,11 @@ export default function LinkedLines() {
             value: 4,
             random: true,
           },
-          color: { value: "#c4c4c4" },
+          color: { value: "#9c9c9c" },
           shape: { type: "edge" },
           line_linked: {
             enable: true,
-            color: "#c4c4c4",
+            color: "#9c9c9c",
           },
           move: { enable: true, speed: 2 },
         },
@@ -22,7 +22,7 @@ export default function LinkedLines() {
     } else {
       console.error("particlesJS not found in window");
     }
-  });
+  }, []);
 
   return <div id="linked-lines" style={{ width: "100%", height: "100%" }} />;
 }

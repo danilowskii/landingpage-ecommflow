@@ -76,7 +76,7 @@ export default function Services() {
                   </span>
 
                   {/* Texto que aparece no hover */}
-                  <span className="absolute p-4 text-lg hover:text-[#0ab9d1] inset-0 font-semibold font-montserrat flex items-center justify-center text-gray-200 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                  <span className="absolute p-4 text-lg hover:text-[#00e1ff] inset-0 font-semibold font-montserrat flex items-center justify-center text-gray-200 opacity-0 transition-all duration-300 group-hover:opacity-100">
                     {service.desc2}
                   </span>
                 </div>

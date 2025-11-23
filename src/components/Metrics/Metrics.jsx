@@ -29,9 +29,9 @@ export default function Metrics() {
                   separator=","
                   direction="up"
                   duration={1}
-                  className="count-up-text border-b pb-2 w-full text-center before:content-['+'] text-5xl text-white/80 transition-colors duration-300 group-hover:text-[#0ab9d1]"
+                  className="count-up-text border-b pb-2 w-full text-center before:content-['+'] text-5xl text-white/80 transition-colors duration-300 group-hover:text-[#00e1ff]"
                 />
-                <p className="flex text-white text-3xl text-center p-2 transition-colors duration-300 group-hover:text-[#0ab9d1]">
+                <p className="flex text-white text-3xl text-center p-2 transition-colors duration-300 group-hover:text-[#00e1ff]">
                   {metric.desc}
                 </p>
               </div>
