@@ -19,6 +19,7 @@ import whatsappLogo from "./assets/whastapp.png";
 import plus from "./assets/plus.png";
 import ScrollRevealFromBottom from "./components/ScrollReveal/FromBottom/";
 import LinkedLines from "./components/LinkedLines/LinkedLines.jsx";
+import Questions from "./components/Questions/Questions.jsx";
 
 export default function main() {
   const imageLogos = [
@@ -50,7 +51,7 @@ export default function main() {
   ];
 
   return (
-    <main className="bg-linear-to-r from-black via-[#030405] to-black min-h-screen">
+    <main className="bg-black">
       <div className="max-w-36 hover:scale-110 transition-all duration-300 z-100 sm:max-w-44 fixed bottom-5 right-[-25px] sm:right-0">
         <a
           target="_blank"
@@ -69,7 +70,7 @@ export default function main() {
             <img className="w-80  py-10 h-auto filter" src={logoWhiteEcomm} />
             <p className="text-3xl leading-14 pb-10 md:pb-0 sm:text-5xl max-w-[95%] font-bold font-montserrat">
               Vamos colocar a <br />
-              <span class="text-4xl md:text-7xl font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="text-4xl md:text-7xl font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                 MÃO NA MASSA
               </span>
               <br /> em seu marketplace
@@ -120,10 +121,13 @@ export default function main() {
               fadeOut
               fadeOutColor="black"
               ariaLabel="Technology partners"
-              className="bg-linear-to-r min-h-[200px]  sm:max-w-full from-black/10 via-transparent to-black/10"
+              className="bg-linear-to-r min-h-20  sm:max-w-full from-black/10 via-transparent to-black/10"
             />
           </div>
         </div>
+      </section>
+      <section>
+        <Questions />
       </section>
       <section id="macbook" className="pt-48 sm:pt-20 lg:pt-0">
         <div>
@@ -169,7 +173,7 @@ export default function main() {
             <ScrollRevealFromBottom>
               <h3 className="text-white/90 gap-2 font-bold flex justify-center text-4xl sm:text-5xl  py-20">
                 Nossos{" "}
-                <p class="font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
+                <p className="font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
                   Serviços
                 </p>
               </h3>
@@ -250,7 +254,7 @@ export default function main() {
         <ScrollRevealFromBottom>
           <h2 className="text-white/90 gap-2 font-bold text-center text-4xl sm:text-5xl py-20">
             Antes e depois da{" "}
-            <span class="font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
+            <span className="font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
               Ecomm Flow
             </span>
           </h2>
@@ -310,7 +314,7 @@ export default function main() {
             </a>
             <h3 className="mx-auto pb-20 px-8 font-bold text-center text-4xl sm:text-5xl text-white/90">
               Confiança que{" "}
-              <span class="font-bold bg-linear-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
+              <span className="font-bold bg-linear-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
                 gera resultados
               </span>
             </h3>
@@ -341,6 +345,20 @@ export default function main() {
             </span>
           </div>
         </div>
+      </section>
+      <section id="location" className="w-screen">
+        <h3 className="mx-auto py-20 px-8 font-bold text-center text-4xl sm:text-5xl  text-white/90">
+          Onde estamos{" "}
+          <span className="font-bold bg-linear-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
+            localizados
+          </span>
+        </h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.937976866415!2d-46.6246819!3d-23.498743400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef7e359b440bd%3A0x21583ba7ab5871ad!2sEcomm%20Flow%20%7C%20Assessoria%20para%20Marketplace!5e0!3m2!1sen!2sbr!4v1764127799839!5m2!1sen!2sbr"
+          allowFullScreen=""
+          referrerPolicy="no-referrer-when-downgrade"
+          className="w-full h-80 md:h-96"
+        ></iframe>
       </section>
 
       <Footer />
