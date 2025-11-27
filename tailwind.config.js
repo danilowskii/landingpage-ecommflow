@@ -2,7 +2,7 @@
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx-tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
@@ -26,6 +26,11 @@ export default {
           "100%": {
             transform: "translate(0px, 0px) scale(1)",
           },
+        },
+      },
+      screens: {
+        macbook: {
+          raw: "(min-width: 900px) and (max-width: 1100px) and (min-height: 500px) and (max-height: 700px)",
         },
       },
     },

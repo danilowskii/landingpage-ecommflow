@@ -78,7 +78,7 @@ export default function Questions() {
       className="relative z-0 inset-0  
     "
     >
-      <div className="absolute  top-0 left-0 w-full z-20 pointer-events-none">
+      <div className="absolute top-0 left-0 w-full z-20 pointer-events-none">
         <CustomShapeDivider />
       </div>
 

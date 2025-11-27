@@ -13,43 +13,43 @@ export default function Services() {
     {
       img: add,
       desc: "Criação e Otimização de Anúncios",
-      desc2: "Anúncios estratégicos que aumentam visibilidade e conversão.",
+      desc2: "Anúncios estratégicos que aumentam visibilidade e conversão",
     },
     {
       img: exam,
       desc: "Ajustes de Descrição e Ficha Técnica",
-      desc2: "Descrições otimizadas e completas para destacar seus produtos.",
+      desc2: "Descrições otimizadas e completas para destacar seus produtos",
     },
     {
       img: webDesign,
       desc: "Edição de Design Estratégico para Seu Nicho",
       desc2:
-        "Modelos visuais que fortalecem sua marca e impulsionam resultados.",
+        "Modelos visuais que fortalecem sua marca e impulsionam resultados",
     },
     {
       img: marketAnalysis,
-      desc: "Pesquisa Aprofundada de Mercado",
-      desc2: "Análise de concorrência e tendências para decisões assertivas.",
+      desc: "Pesquisa de Mercado",
+      desc2: "Análise de concorrência e anúncios para otimização assertiva",
     },
     {
       img: ads,
       desc: "Criação e Otimização de Publicidade (ADS)",
-      desc2: "Campanhas inteligentes para ampliar alcance e vendas.",
+      desc2: "Campanhas inteligentes para ampliar alcance e vendas",
     },
     {
       img: fastDelivery,
-      desc: "Estratégias Flex, Flex Turbo e Full",
-      desc2: "Logística otimizada para melhor ranqueamento e entrega rápida.",
+      desc: "Criação de Clips para Marketplace",
+      desc2: "Crie vídeos por IA através de 3 fotos simples do produto",
     },
     {
       img: catalog,
-      desc: "Anúncios de Catálogo e Kits",
-      desc2: "Combinações estratégicas para aumentar o ticket médio.",
+      desc: "Anúncios, Combos e Kits",
+      desc2: "Combinações estratégicas para aumentar o ticket médio",
     },
     {
       img: newMarketplace,
       desc: "Abertura de Novos Marketplaces",
-      desc2: "Implantação completa para expandir sua presença online.",
+      desc2: "Implantação completa para expandir sua presença online",
     },
   ];
   return (

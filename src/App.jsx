@@ -11,7 +11,7 @@ import Services from "./components/Services";
 import CompareDemo from "./components/ComparePhoto";
 import Metrics from "./components/Metrics";
 import equipe from "./assets/equipe.png";
-import SendMessage from "./components/SendMessage";
+
 import Footer from "./components/Footer/";
 import Particles from "./components/Particles";
 import Whastapp from "./components/Whatsapp";
@@ -134,15 +134,14 @@ export default function main() {
           <MacbookScrollDemo />
 
           <p className="bg-black text-white/90 text-2xl sm:text-3xl max-w-[95%] items-center mx-auto text-inline sm:max-w-[50%] text-center py-10 font-semibold">
-            Transformamos seus anúncios em{" "}
-            <span className="text-[#0ab9d1] justify-center">
-              resultados reais
+            Transformamos seus anúncios em operações mais{" "}
+            <span className="font-bold text-[#0ab9d1]">
+              eficientes e estratégicas,
             </span>{" "}
-            com ações objetivas e inteligentes, sem complicações.{" "}
-            <span className="text-[#0ab9d1] ">
-              Mais vendas, mais visibilidade
-            </span>{" "}
-            e <span className="text-[#0ab9d1] ">crescimento previsível</span>{" "}
+            garantindo mais{" "}
+            <span className="font-bold px-1 text-[#0ab9d1]">
+              organização, clareza e performance
+            </span>
             para o seu marketplace.
           </p>
         </div>
@@ -181,22 +180,15 @@ export default function main() {
                 <Services />
               </div>
               <p className="text-white/90 max-w-[95%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl py-10 justify-center">
-                Nossa abordagem estratégica garante que cada produto e anúncio
-                trabalhe para{" "}
-                <span className="text-[#0ab9d1] font-bold">
-                  gerar resultados reais.
+                Estruturamos seus anúncios e produtos para que funcionem de
+                <span className="px-1 font-bold text-[#0ab9d1]">
+                  forma mais clara e eficiente.
                 </span>{" "}
-                <span className="text-[#0ab9d1] font-bold">
-                  Simplificamos decisões complexas
-                </span>{" "}
-                e{" "}
-                <span className="text-[#0ab9d1] font-bold">
-                  potencializamos o desempenho
-                </span>{" "}
-                do seu marketplace, aumentando a confiança do cliente e o{" "}
-                <span className="text-[#0ab9d1] font-bold">
-                  faturamento do seu negócio.
+                Simplificamos processos e{" "}
+                <span className="px-1 font-bold text-[#0ab9d1]">
+                  elevamos a performance do seu marketplace,
                 </span>
+                fortalecendo a confiança dos clientes.
               </p>
               <div className="flex justify-center text-2xl items-center py-8">
                 <a
@@ -321,10 +313,12 @@ export default function main() {
             <div>
               <Metrics />
             </div>
-            <p className="text-white/90 max-w-[80%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl pt-10 justify-center">
-              Performance que entrega lucro. Mais do que promessas, <br />{" "}
+            <p className="text-white/90 max-w-[80%] mx-auto text-center font-semibold sm:max-w-[50%] text-2xl pt-10 justify-center">
+              Performance que gera{" "}
+              <span className="text-[#0ab9d1] font-bold">impacto real.</span>{" "}
+              Mais do que promessas, entregamos{" "}
               <span className="text-[#0ab9d1] font-bold">
-                resultados mensuráveis e duradouros.
+                melhorias mensuráveis e consistentes.
               </span>
             </p>
           </div>
@@ -338,21 +332,23 @@ export default function main() {
               src={equipe}
               className="w-full opacity-40 transition-all duration-300"
             />
-
-            {/* Texto que aparece no hover */}
-            <span className="absolute  inset-0 font-semibold font-montserrat flex items-center justify-center transition-all duration-300 opacity-100">
-              <SendMessage />
-            </span>
           </div>
         </div>
       </section>
-      <section id="location" className="w-screen">
-        <h3 className="mx-auto py-20 px-8 font-bold text-center text-4xl sm:text-5xl  text-white/90">
+      <section id="location" className="">
+        <h3 className="mx-auto py-10 px-8 font-bold text-center text-4xl sm:text-5xl  text-white/90">
           Onde estamos{" "}
           <span className="font-bold bg-linear-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
             localizados
           </span>
         </h3>
+        <div className="text-white flex-col text-center pb-10 px-10 flex justify-center">
+          <span className="text-lg font-bold">Edifício K1</span>
+          <span className="">
+            R. Conselheiro Saraiva, 207 - Santana, São Paulo - SP, 02037-020
+          </span>
+        </div>
+
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.937976866415!2d-46.6246819!3d-23.498743400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef7e359b440bd%3A0x21583ba7ab5871ad!2sEcomm%20Flow%20%7C%20Assessoria%20para%20Marketplace!5e0!3m2!1sen!2sbr!4v1764127799839!5m2!1sen!2sbr"
           allowFullScreen=""

@@ -79,15 +79,23 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-          © 2025 EcommFlow. Todos os direitos reservados.
+        <div className="mt-8 border-t group border-gray-700 pt-6 text-center text-sm text-gray-400">
+          © 2025 Ecomm Flow Estratégias Digitais LTDA — CNPJ 44.148.089/0001-03.
+          <p className="text-gray-400 text-center text-sm">
+            Todos os direitos reservados.
+          </p>
+          <p className="text-transparent transition-all ease-in-out group-hover:text-gray-400 text-center text-sm">
+            Desenvolvido por{" "}
+            <a
+              href="https://www.linkedin.com/in/paivadanilo/"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="cursor-pointer"
+            >
+              Danilo
+            </a>
+          </p>
         </div>
-        <p className="text-gray-400 text-center text-sm">
-          Desenvolvido por{" "}
-          <a target="_blank" href="https://www.linkedin.com/in/paivadanilo/">
-            Danilo
-          </a>
-        </p>
       </footer>
     </div>
   );

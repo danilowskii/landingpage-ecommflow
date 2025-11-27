@@ -120,7 +120,7 @@ export const MacbookScroll = ({ src, showGradient, title, badge }) => {
   return (
     <div
       ref={ref}
-      className="flex min-h-[200vh] shrink-0 scale-[0.5] transform flex-col items-center justify-start py-80 [perspective:800px] sm:scale-50 md:scale-100 "
+      className="flex min-h-[200vh] [@media_(min-width:900px)_and_(max-width:1100px)_and_(min-height:600px)_and_(max-height:700px)]:min-h-[250vh] [@media_(min-width:768px)_and_(max-width:1024px)_and_(min-height:1024px)_and_(max-height:1366px)]:min-h-[120vh] shrink-0 scale-[0.5] transform flex-col items-center justify-start py-10 [perspective:800px] sm:scale-50 md:scale-100 "
     >
       <motion.h2
         style={{
@@ -133,7 +133,7 @@ export const MacbookScroll = ({ src, showGradient, title, badge }) => {
           <span>
             Estratégia de{" "}
             <span className="font-bold bg-linear-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
-              impacto
+              impacto.
             </span>
             <br /> Simples.
           </span>
