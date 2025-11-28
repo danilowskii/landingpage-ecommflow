@@ -11,7 +11,6 @@ import Services from "./components/Services";
 import CompareDemo from "./components/ComparePhoto";
 import Metrics from "./components/Metrics";
 import equipe from "./assets/equipe.png";
-
 import Footer from "./components/Footer/";
 import Particles from "./components/Particles";
 import Whastapp from "./components/Whatsapp";

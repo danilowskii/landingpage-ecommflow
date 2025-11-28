@@ -4,9 +4,10 @@ import exam from "../../assets/exam.png";
 import webDesign from "../../assets/web-design.png";
 import marketAnalysis from "../../assets/market-analysis.png";
 import ads from "../../assets/social-media-marketing.png";
-import fastDelivery from "../../assets/fast-delivery.png";
+
 import catalog from "../../assets/winner.png";
 import newMarketplace from "../../assets/online-marketplace.png";
+import aiVideo from "../../assets/ai-video.png";
 
 export default function Services() {
   const ourServices = [
@@ -37,7 +38,7 @@ export default function Services() {
       desc2: "Campanhas inteligentes para ampliar alcance e vendas",
     },
     {
-      img: fastDelivery,
+      img: aiVideo,
       desc: "Criação de Clips para Marketplace",
       desc2: "Crie vídeos por IA através de 3 fotos simples do produto",
     },
