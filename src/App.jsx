@@ -20,8 +20,10 @@ import plus from "./assets/plus.png";
 import ScrollRevealFromBottom from "./components/ScrollReveal/FromBottom/";
 import LinkedLines from "./components/LinkedLines/LinkedLines.jsx";
 import Questions from "./components/Questions/Questions.jsx";
+import { useState } from "react";
 
 export default function main() {
+  const [selectedQuestion, setSelectedQuestion] = useState("");
   const imageLogos = [
     {
       src: meli,
@@ -50,13 +52,15 @@ export default function main() {
     },
   ];
 
+  const mensagem = `Oi, vim do site e gostaria de informações sobre a assessoria Ecommflow. ${selectedQuestion} #ECOMMFLOW`;
+
+  const link =
+    "https://wa.me/5511966052171?text=" + encodeURIComponent(mensagem);
+
   return (
     <main className="bg-black">
       <div className="max-w-36 hover:scale-110 transition-all duration-300 z-100 sm:max-w-44 fixed bottom-5 right-[-25px] sm:right-0">
-        <a
-          target="_blank"
-          href="https://wa.me/5511966052171?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20assessoria%20Ecommflow...%20%23ECOMMFLOW"
-        >
+        <a target="_blank" href={link}>
           <Whastapp />
         </a>
       </div>
@@ -73,7 +77,7 @@ export default function main() {
               <span className="text-4xl md:text-7xl font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                 MÃO NA MASSA
               </span>
-              <br /> em seu marketplace
+              <br /> no seu marketplace
             </p>
             <p className="pb-10 sm:py-20 text-xl sm:text-2xl font-semibold px-4">
               Nós cuidamos dos seus anúncios, enquanto você cuida do seu
@@ -83,7 +87,7 @@ export default function main() {
             <div className="flex flex-row gap-3 sm:gap-8 sm:flex ">
               <a
                 className="text-sm sm:text-xl"
-                href="https://wa.me/5511966052171?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20assessoria%20Ecommflow...%20%23ECOMMFLOW"
+                href={link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -114,22 +118,22 @@ export default function main() {
               logos={imageLogos}
               speed={50}
               direction="left"
-              logoHeight={68}
+              logoHeight={64}
               gap={40}
               pauseOnHover
               scaleOnHover
               fadeOut
               fadeOutColor="black"
               ariaLabel="Technology partners"
-              className="bg-linear-to-r min-h-20  sm:max-w-full from-black/10 via-transparent to-black/10"
+              className="bg-linear-to-r min-h-24 sm:max-w-full from-black/10 via-transparent to-black/10"
             />
           </div>
         </div>
       </section>
       <section>
-        <Questions />
+        <Questions onSelect={setSelectedQuestion} />
       </section>
-      <section id="macbook" className="pt-48 sm:pt-20 lg:pt-0">
+      <section id="macbook" className="mt-[-400px] sm:pt-20 lg:pt-0">
         <div>
           <MacbookScrollDemo />
 
@@ -162,7 +166,7 @@ export default function main() {
                 particleSpread={10}
                 speed={0.1}
                 particleBaseSize={100}
-                moveParticlesOnHover={true}
+                moveParticlesOnHover={false}
                 alphaParticles={false}
                 disableRotation={false}
               />
@@ -191,10 +195,7 @@ export default function main() {
                 fortalecendo a confiança dos clientes.
               </p>
               <div className="flex justify-center text-2xl items-center py-8">
-                <a
-                  target="_blank"
-                  href="https://wa.me/5511966052171?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20assessoria%20Ecommflow...%20%23ECOMMFLOW"
-                >
+                <a target="_blank" href={link}>
                   <Button variant="primary">Quero garantir agora!</Button>
                 </a>
               </div>
@@ -216,7 +217,7 @@ export default function main() {
             particleSpread={10}
             speed={0.1}
             particleBaseSize={100}
-            moveParticlesOnHover={true}
+            moveParticlesOnHover={false}
             alphaParticles={false}
             disableRotation={false}
           />
@@ -237,7 +238,7 @@ export default function main() {
               particleSpread={10}
               speed={0.1}
               particleBaseSize={100}
-              moveParticlesOnHover={true}
+              moveParticlesOnHover={false}
               alphaParticles={false}
               disableRotation={false}
             />
@@ -282,7 +283,7 @@ export default function main() {
               particleSpread={10}
               speed={0.1}
               particleBaseSize={100}
-              moveParticlesOnHover={true}
+              moveParticlesOnHover={false}
               alphaParticles={false}
               disableRotation={false}
             />
@@ -293,11 +294,7 @@ export default function main() {
             id="final"
             className="max-w-[95%] z-100 sm:max-w-[70%] mx-auto rounded-4xl mb-20 relative overflow-hidden flex flex-col bg-linear-to-br from-[#0ab9d1]/1 via-[#0ab9d1]/50 to-[#0ab9d1]/10 py-20"
           >
-            <a
-              target="_blank"
-              className="flex pb-10 self-center"
-              href="https://wa.me/5511966052171?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20assessoria%20Ecommflow...%20%23ECOMMFLOW"
-            >
+            <a target="_blank" className="flex pb-10 self-center" href={link}>
               <img
                 src={logoWhiteEcomm}
                 className="hover:scale-110 transition-all duration-300 w-100"
@@ -337,9 +334,9 @@ export default function main() {
       </section>
       <section id="location" className="">
         <h3 className="mx-auto py-10 px-8 font-bold text-center text-4xl sm:text-5xl  text-white/90">
-          Onde estamos{" "}
+          Onde Estamos{" "}
           <span className="font-bold bg-linear-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
-            localizados
+            Localizados
           </span>
         </h3>
         <div className="text-white flex-col text-center pb-10 px-10 flex justify-center">
