@@ -133,7 +133,7 @@ export default function main() {
       <section>
         <Questions onSelect={setSelectedQuestion} />
       </section>
-      <section id="macbook" className="mt-[-400px] sm:pt-20 lg:pt-0">
+      <section id="macbook" className="mt-[-400px] md:mt-0 sm:pt-20 lg:pt-0">
         <div>
           <MacbookScrollDemo />
 
