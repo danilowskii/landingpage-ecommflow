@@ -40,7 +40,7 @@ export default function Ecosystem() {
             <div key={id}>
               <img
                 src={logo}
-                className="w-40 hover:scale-105 transition-transform ease-in h-auto"
+                className="w-52 hover:scale-105 transition-transform ease-in h-auto"
                 alt=""
               />
             </div>

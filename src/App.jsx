@@ -147,7 +147,7 @@ export default function main() {
             <span className="font-bold px-1 text-[#0ab9d1]">
               organização, clareza e performance
             </span>
-            para o seu marketplace.
+            para o seu marketplace
           </p>
         </div>
       </section>
@@ -193,7 +193,7 @@ export default function main() {
                 <span className="px-1 font-bold text-[#0ab9d1]">
                   elevamos a performance do seu marketplace,
                 </span>
-                fortalecendo a confiança dos clientes.
+                fortalecendo a confiança dos clientes
               </p>
               <div className="flex justify-center text-2xl items-center py-8">
                 <a target="_blank" href={link}>
@@ -265,7 +265,7 @@ export default function main() {
             <span className="text-[#0ab9d1] font-bold">
               diferencia sua marca
             </span>{" "}
-            no marketplace.
+            no marketplace
           </p>
         </ScrollRevealFromBottom>
       </section>
@@ -317,7 +317,7 @@ export default function main() {
               <span className="text-[#0ab9d1] font-bold">impacto real.</span>{" "}
               Mais do que promessas, entregamos{" "}
               <span className="text-[#0ab9d1] font-bold">
-                melhorias mensuráveis e consistentes.
+                melhorias mensuráveis e consistentes
               </span>
             </p>
           </div>

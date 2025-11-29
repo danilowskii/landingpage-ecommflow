@@ -133,7 +133,7 @@ export const MacbookScroll = ({ src, showGradient, title, badge }) => {
           <span>
             Estratégias de{" "}
             <span className="font-bold bg-linear-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
-              Impacto.
+              Impacto
             </span>
           </span>
         )}

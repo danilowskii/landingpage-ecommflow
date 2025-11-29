@@ -135,7 +135,7 @@ export default function Questions({ onSelect }) {
             <h1 className="text-2xl font-medium">
               Receba a{" "}
               <span className="text-[#00e1ff] font-bold">estratégia certa</span>{" "}
-              para evoluir mais rápido.
+              para evoluir mais rápido
             </h1>
           </div>
           {questions.map((question) => (
