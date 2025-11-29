@@ -7,7 +7,7 @@ import ecommerce40 from "../../assets/ecommerce40.png";
 import ecomSult from "../../assets/ecomSult.png";
 import soAtacado from "../../assets/soAtacado.png";
 import academia from "../../assets/academia.png";
-import FromBottom from "../ScrollReveal/FromBottom";
+import Particles from "../Particles";
 
 export default function Ecosystem() {
   const logos = [
@@ -24,6 +24,25 @@ export default function Ecosystem() {
   ];
   return (
     <div className="relative pb-20">
+      <div
+        style={{
+          width: "100%",
+          height: "100svh",
+          position: "absolute",
+          opacity: "0.4",
+        }}
+      >
+        <Particles
+          particleColors={["#0ab9d1", "#fff"]}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={false}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+      </div>
       <div className="text-white max-w-[95%] md:max-w-[70%] border-white/20 border mx-auto rounded-xl relative text-xl justify-center items-center overflow-hidden p-8 flex flex-col md:flex-wrap gap-5 md:flex-row h-auto">
         <h2 className="text-white/90 gap-2 font-bold text-center text-4xl sm:text-5xl py-5">
           Nosso{" "}
