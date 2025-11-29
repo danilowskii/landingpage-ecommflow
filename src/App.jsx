@@ -20,6 +20,7 @@ import ScrollRevealFromBottom from "./components/ScrollReveal/FromBottom/";
 import LinkedLines from "./components/LinkedLines/LinkedLines.jsx";
 import Questions from "./components/Questions/Questions.jsx";
 import { useState } from "react";
+import BeforeAfter from "./components/BeforeAfter/BeforeAfter.jsx";
 
 export default function main() {
   const [selectedQuestion, setSelectedQuestion] = useState("");
@@ -244,13 +245,13 @@ export default function main() {
           </div>
         </div>
         <ScrollRevealFromBottom>
-          <h2 className="text-white/90 gap-2 font-bold text-center text-4xl sm:text-5xl py-20">
+          <h2 className="text-white/90 gap-2 font-bold text-center text-4xl sm:text-5xl py-10">
             Antes e depois da{" "}
             <span className="font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
               Ecomm Flow
             </span>
           </h2>
-          <CompareDemo />
+          <BeforeAfter />
           <p className="text-white/90 max-w-[95%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl py-10 justify-center">
             Nossos{" "}
             <span className="text-[#0ab9d1] font-bold">

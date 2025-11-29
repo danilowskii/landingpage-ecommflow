@@ -127,7 +127,7 @@ export default function Questions({ onSelect }) {
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
-            className="rounded shadow-[0px_0px_10px_rgba(0,0,0,1)] w-[380px] h-[215px] md:w-[560px] md:h-[315px] lg:w-[637px] lg:h-[360px]"
+            className="rounded shadow-[0px_0px_10px_rgba(0,0,0,1)] w-[365px] h-[200px] md:w-[570px] md:h-[325px] lg:w-[657px] lg:h-[380px]"
           ></iframe>
         </div>
         <div className="flex flex-col z-10">
