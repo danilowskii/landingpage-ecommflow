@@ -11,16 +11,16 @@ import Particles from "../Particles";
 
 export default function Ecosystem() {
   const logos = [
-    ecommFlow,
-    dreContabil,
+    { logo: ecommFlow, link: "https://ecommflow.com.br" },
+    { logo: dreContabil, link: "https://www.drecontabil.com.br" },
 
-    lojaHub,
-    hubAnalytics,
-    ecomSummit,
-    ecommerce40,
-    ecomSult,
-    soAtacado,
-    academia,
+    { logo: lojaHub, link: "https://lojahub.com.br" },
+    { logo: hubAnalytics, link: "https://analytics.lojahub.com.br" },
+    { logo: ecomSummit, link: "https://www.ecomsummit.com.br" },
+    { logo: ecommerce40, link: "https://www.ecommerce4ponto0.com.br" },
+    { logo: ecomSult, link: "https://www.ecomsult.com.br" },
+    { logo: soAtacado, link: "https://www.soatacado.com" },
+    { logo: academia, link: "https://www.academiadoecommerce.com.br" },
   ];
   return (
     <div className="relative pb-20">
@@ -57,11 +57,13 @@ export default function Ecosystem() {
         <div className="flex z-10 flex-wrap items-center p-8 justify-center gap-10">
           {logos.map((logo, id) => (
             <div key={id}>
-              <img
-                src={logo}
-                className="w-52 hover:scale-105 transition-transform ease-in h-auto"
-                alt=""
-              />
+              <a target="_blank" href={logo.link}>
+                <img
+                  src={logo.logo}
+                  className="w-52 hover:scale-105 transition-transform ease-in h-auto"
+                  alt=""
+                />
+              </a>
             </div>
           ))}
         </div>
