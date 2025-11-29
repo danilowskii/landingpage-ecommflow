@@ -21,6 +21,7 @@ import LinkedLines from "./components/LinkedLines/LinkedLines.jsx";
 import Questions from "./components/Questions/Questions.jsx";
 import { useState } from "react";
 import BeforeAfter from "./components/BeforeAfter/BeforeAfter.jsx";
+import Ecosystem from "./components/Ecosystem/Ecosystem.jsx";
 
 export default function main() {
   const [selectedQuestion, setSelectedQuestion] = useState("");
@@ -310,6 +311,7 @@ export default function main() {
             <div>
               <Metrics />
             </div>
+
             <p className="text-white/90 max-w-[80%] mx-auto text-center font-semibold sm:max-w-[50%] text-2xl pt-10 justify-center">
               Performance que gera{" "}
               <span className="text-[#0ab9d1] font-bold">impacto real.</span>{" "}
@@ -320,6 +322,11 @@ export default function main() {
             </p>
           </div>
         </ScrollRevealFromBottom>
+      </section>
+      <section id="ecossistema">
+        <div>
+          <Ecosystem />
+        </div>
       </section>
       <section id="contato">
         <div className="">
