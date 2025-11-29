@@ -23,7 +23,7 @@ export default function Ecosystem() {
     { logo: academia, link: "https://www.academiadoecommerce.com.br" },
   ];
   return (
-    <div className="relative pb-20">
+    <div className="relative">
       <div
         style={{
           width: "100%",
@@ -43,24 +43,21 @@ export default function Ecosystem() {
           disableRotation={false}
         />
       </div>
-      <div className="text-white max-w-[95%] md:max-w-[70%] border-white/20 border mx-auto rounded-xl relative text-xl justify-center items-center overflow-hidden p-8 flex flex-col md:flex-wrap gap-5 md:flex-row h-auto">
-        <h2 className="text-white/90 gap-2 font-bold text-center text-4xl sm:text-5xl py-5">
+      <div className="text-white  border-white/20 mx-auto rounded-xl relative text-xl justify-center items-center overflow-hidden p-8 flex flex-col md:flex-wrap gap-5 md:flex-row h-auto">
+        <h2 className="text-white/90 gap-2 font-bold text-center text-4xl sm:text-5xl ">
           Nosso{" "}
           <span className="font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
             Ecossistema
           </span>
         </h2>
 
-        <div className="w-96 h-52 bg-sky-700/50 absolute top-0 left-0 filter z-0 blur-[150px] rounded-full"></div>
-        <div className="w-96 h-52 bg-gray-500/70 absolute bottom-1/4 right-1/12 filter z-0 blur-[150px] rounded-full"></div>
-        <div className="w-96 h-52 bg-sky-200/40 absolute left-1/2 -translate-x-1/2 bottom-0 filter z-0 blur-[150px] rounded-full"></div>
         <div className="flex z-10 flex-wrap items-center p-8 justify-center gap-10">
           {logos.map((logo, id) => (
             <div key={id}>
               <a target="_blank" href={logo.link}>
                 <img
                   src={logo.logo}
-                  className="w-52 hover:scale-105 transition-transform ease-in h-auto"
+                  className="w-36 hover:scale-105 transition-transform ease-in h-auto"
                   alt=""
                 />
               </a>

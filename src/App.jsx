@@ -295,19 +295,15 @@ export default function main() {
             id="final"
             className="max-w-[95%] z-100 sm:max-w-[70%] mx-auto rounded-4xl mb-20 relative overflow-hidden flex flex-col bg-linear-to-br from-[#0ab9d1]/1 via-[#0ab9d1]/50 to-[#0ab9d1]/10 py-20"
           >
-            <a target="_blank" className="flex pb-10 self-center" href={link}>
-              <img
-                src={logoWhiteEcomm}
-                className="hover:scale-110 transition-all duration-300 w-100"
-                alt=""
-              />
-            </a>
-            <h3 className="mx-auto pb-20 px-8 font-bold text-center text-4xl sm:text-5xl text-white/90">
+            <div>
+              <Ecosystem />
+            </div>
+            <h2 className="text-white text-center pb-10 text-3xl font-bold">
               Confiança que{" "}
-              <span className="font-bold bg-linear-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
+              <span className="font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
                 gera resultados
               </span>
-            </h3>
+            </h2>
             <div>
               <Metrics />
             </div>
@@ -324,9 +320,7 @@ export default function main() {
         </ScrollRevealFromBottom>
       </section>
       <section id="ecossistema">
-        <div>
-          <Ecosystem />
-        </div>
+        <div></div>
       </section>
       <section id="contato">
         <div className="">
