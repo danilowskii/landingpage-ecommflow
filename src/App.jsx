@@ -387,8 +387,8 @@ export default function Main() {
                 key={i}
                 src={src}
                 className="
-          object-cover rounded
-          w-[80%] h-64
+          object-contain rounded
+          w-64 h-auto
         "
               />
             ))}
