@@ -19,7 +19,7 @@ import plus from "./assets/plus.png";
 import ScrollRevealFromBottom from "./components/ScrollReveal/FromBottom/";
 import LinkedLines from "./components/LinkedLines/LinkedLines.jsx";
 import Questions from "./components/Questions/Questions.jsx";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import BeforeAfter from "./components/BeforeAfter/BeforeAfter.jsx";
 import Ecosystem from "./components/Ecosystem/Ecosystem.jsx";
 import space1 from "./assets/space1.png";
@@ -32,29 +32,7 @@ export default function Main() {
   const [selectedQuestion, setSelectedQuestion] = useState("");
   const images = [space1, space2, space3, space4, space5];
 
-  const carouselRef = useRef(null);
-
-  // Duplicando as imagens para looping sem "tranco"
-  const allImages = [...images, ...images];
-
-  useEffect(() => {
-    const container = carouselRef.current;
-    let x = 0;
-
-    const animate = () => {
-      x -= 0.7; // velocidade (0.5 é suave, pode ajustar)
-
-      // reseta quando metade já passou — sem tranco
-      if (Math.abs(x) >= container.scrollWidth / 2) {
-        x = 0;
-      }
-
-      container.style.transform = `translateX(${x}px)`;
-      requestAnimationFrame(animate);
-    };
-
-    animate();
-  }, []);
+  const loop = [...images, ...images, ...images, ...images];
   const imageLogos = [
     {
       src: meli,
@@ -102,8 +80,11 @@ export default function Main() {
           </div>
 
           <div className="flex flex-col text-center items-center absolute inset-0 z-20 text-white/90  text-xl">
-            <img className="w-80  py-10 h-auto filter" src={logoWhiteEcomm} />
-            <p className="text-3xl leading-14 pb-10 md:pb-0 sm:text-5xl max-w-[95%] font-bold font-montserrat">
+            <img
+              className="w-64 md:w-80 py-10 h-auto filter"
+              src={logoWhiteEcomm}
+            />
+            <p className="text-3xl md:leading-14 pb-10 md:pb-0 sm:text-5xl max-w-[95%] font-bold font-montserrat">
               Vamos colocar a <br />
               <span className="text-4xl md:text-7xl font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                 MÃO NA MASSA
@@ -164,7 +145,7 @@ export default function Main() {
       <section>
         <Questions onSelect={setSelectedQuestion} />
       </section>
-      <section id="macbook" className="mt-[-410px] md:mt-0 sm:pt-20 lg:pt-0">
+      <section id="macbook" className="mt-[-380px] md:mt-0 sm:pt-20 lg:pt-0">
         <div>
           <MacbookScrollDemo />
 
@@ -376,24 +357,19 @@ export default function Main() {
             R. Conselheiro Saraiva, 207 - Santana, São Paulo - SP, 02037-020
           </span>
         </div>
-        <div className="w-full overflow-hidden pb-5">
-          <div
-            ref={carouselRef}
-            className="flex gap-6 will-change-transform"
-            style={{ width: "max-content" }}
-          >
-            {allImages.map((src, i) => (
+        {/**Carrossel de imagens localização */}
+        <div className="overflow-hidden w-full relative h-[220px] lg:h-[280px]">
+          <div className="carousel-track">
+            {loop.map((src, i) => (
               <img
                 key={i}
                 src={src}
-                className="
-          object-contain rounded
-          w-64 h-auto
-        "
+                className="w-[380px] h-[240px] object-cover shrink-0 scale-90 lg:scale-100"
               />
             ))}
           </div>
         </div>
+
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.937976866415!2d-46.6246819!3d-23.498743400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef7e359b440bd%3A0x21583ba7ab5871ad!2sEcomm%20Flow%20%7C%20Assessoria%20para%20Marketplace!5e0!3m2!1sen!2sbr!4v1764127799839!5m2!1sen!2sbr"
           allowFullScreen=""

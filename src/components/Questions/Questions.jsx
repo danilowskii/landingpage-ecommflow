@@ -111,7 +111,7 @@ export default function Questions({ onSelect }) {
           />
         </div>
       </div>
-      <div className="text-white max-w-[95%] border-white/20 gap-8 border mx-auto rounded-xl relative text-xl justify-center items-center overflow-hidden py-20 px-10 flex flex-col gap-5 md:flex-row mt-[465px] md:mt-[400px]">
+      <div className="text-white max-w-[95%] border-white/20 gap-8 border mx-auto rounded-xl relative text-xl justify-center items-center overflow-hidden py-10 px-10 flex flex-col gap-5 md:flex-row mt-[465px] md:mt-[400px]">
         <div className="-z-10 absolute right-1/4 top-1/3">
           <div className="w-96 h-52 bg-sky-700/90 absolute bottom-0 right-2/3 top-0 filter z-0 blur-[150px] rounded-full"></div>
 
