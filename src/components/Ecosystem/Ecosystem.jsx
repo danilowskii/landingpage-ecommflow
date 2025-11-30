@@ -57,7 +57,7 @@ export default function Ecosystem() {
               <a target="_blank" href={logo.link}>
                 <img
                   src={logo.logo}
-                  className="w-36 hover:scale-105 transition-transform ease-in h-auto"
+                  className="w-24 md:w-36 hover:scale-105 transition-transform ease-in h-auto"
                   alt=""
                 />
               </a>

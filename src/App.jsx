@@ -19,12 +19,42 @@ import plus from "./assets/plus.png";
 import ScrollRevealFromBottom from "./components/ScrollReveal/FromBottom/";
 import LinkedLines from "./components/LinkedLines/LinkedLines.jsx";
 import Questions from "./components/Questions/Questions.jsx";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import BeforeAfter from "./components/BeforeAfter/BeforeAfter.jsx";
 import Ecosystem from "./components/Ecosystem/Ecosystem.jsx";
+import space1 from "./assets/space1.png";
+import space2 from "./assets/space2.png";
+import space3 from "./assets/space3.png";
+import space4 from "./assets/space4.png";
+import space5 from "./assets/space5.png";
 
-export default function main() {
+export default function Main() {
   const [selectedQuestion, setSelectedQuestion] = useState("");
+  const images = [space1, space2, space3, space4, space5];
+
+  const carouselRef = useRef(null);
+
+  // Duplicando as imagens para looping sem "tranco"
+  const allImages = [...images, ...images];
+
+  useEffect(() => {
+    const container = carouselRef.current;
+    let x = 0;
+
+    const animate = () => {
+      x -= 0.7; // velocidade (0.5 é suave, pode ajustar)
+
+      // reseta quando metade já passou — sem tranco
+      if (Math.abs(x) >= container.scrollWidth / 2) {
+        x = 0;
+      }
+
+      container.style.transform = `translateX(${x}px)`;
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+  }, []);
   const imageLogos = [
     {
       src: meli,
@@ -134,7 +164,7 @@ export default function main() {
       <section>
         <Questions onSelect={setSelectedQuestion} />
       </section>
-      <section id="macbook" className="mt-[-400px] md:mt-0 sm:pt-20 lg:pt-0">
+      <section id="macbook" className="mt-[-410px] md:mt-0 sm:pt-20 lg:pt-0">
         <div>
           <MacbookScrollDemo />
 
@@ -346,7 +376,24 @@ export default function main() {
             R. Conselheiro Saraiva, 207 - Santana, São Paulo - SP, 02037-020
           </span>
         </div>
-
+        <div className="w-full overflow-hidden pb-5">
+          <div
+            ref={carouselRef}
+            className="flex gap-6 will-change-transform"
+            style={{ width: "max-content" }}
+          >
+            {allImages.map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                className="
+          object-cover rounded
+          w-[80%] h-64
+        "
+              />
+            ))}
+          </div>
+        </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.937976866415!2d-46.6246819!3d-23.498743400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef7e359b440bd%3A0x21583ba7ab5871ad!2sEcomm%20Flow%20%7C%20Assessoria%20para%20Marketplace!5e0!3m2!1sen!2sbr!4v1764127799839!5m2!1sen!2sbr"
           allowFullScreen=""

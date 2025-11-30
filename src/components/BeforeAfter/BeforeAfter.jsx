@@ -68,23 +68,26 @@ export default function BeforeAfter() {
           {extendedGroups.map((group, groupIndex) => (
             <div
               key={groupIndex}
-              className="w-full justify-center flex shrink-0 p-4 box-border"
+              className="w-full  flex shrink-0 p-4 box-border"
             >
-              <div className="flex flex-col md:flex-row gap-4 h-full w-full">
+              <div className="flex flex-col md:flex-row gap-4 h-full  w-full">
                 {group.map((imgSrc, imgIndex) => (
                   // Alteramos aqui para flex-col para empilhar Texto em cima da Imagem
-                  <div key={imgIndex} className="flex-1 flex flex-col">
+                  <div
+                    key={imgIndex}
+                    className="flex-1 flex justify-center items-center flex-col"
+                  >
                     {/* --- TEXTO ACIMA DA IMAGEM --- */}
                     <span className="text-center font-bold text-[#0ab9d1] mb-3 uppercase tracking-wider text-lg ">
                       {imgIndex === 0 ? "Antes" : "Depois"}
                       {/* ^^^ Mudei para Projeto/Realidade baseado nas suas imagens, mas pode por Antes/Depois */}
                     </span>
 
-                    <div className="h-auto relative group w-full">
+                    <div className="h-auto flex justify-center items-center relative group w-full">
                       <img
                         src={imgSrc}
                         alt={`Slide ${groupIndex}-${imgIndex}`}
-                        className="w-full h-full object-cover rounded-md hover:scale-105 transition-transform duration-300 shadow-sm"
+                        className="w-3/4  md:w-full md:h-full object-cover rounded-md hover:scale-105 transition-transform duration-300 shadow-sm"
                       />
                     </div>
                   </div>
