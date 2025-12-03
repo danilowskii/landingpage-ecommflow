@@ -57,7 +57,6 @@ export default function Main() {
     },
   ];
 
-  // Lógica para montar a mensagem baseada na escolha do Pop-up
   const mensagem = selectedQuestion
     ? `Olá, vim do site e gostaria de informações sobre a assessoria Ecommflow. ${selectedQuestion} #ECOMMFLOW`
     : "Olá, vim do site e gostaria de informações sobre a assessoria Ecommflow. #ECOMMFLOW";
@@ -65,17 +64,14 @@ export default function Main() {
   const link =
     "https://wa.me/5511966052171?text=" + encodeURIComponent(mensagem);
 
-  // Função que recebe o dado do componente Questions
   const handleSelection = (questionText) => {
     setSelectedQuestion(questionText);
   };
 
   return (
     <main className="bg-black ">
-      {/* --- POP-UP INTEGRADO AQUI --- */}
       <Questions onConfirmSelection={handleSelection} />
 
-      {/* Botão Flutuante do WhatsApp */}
       <div className="max-w-36 hover:scale-110 transition-all duration-300 z-50 sm:max-w-44 fixed bottom-5 right-[-25px] sm:right-0">
         <a target="_blank" href={link} rel="noopener noreferrer">
           <Whastapp />
@@ -317,7 +313,6 @@ export default function Main() {
       <section id="contato" className="z-20">
         <div className="">
           <div className="relative group h-full flex items-center justify-center flex-col text-center">
-            {/* Texto padrão */}
             <img
               src={equipe}
               alt="Time Ecomm Flow"
@@ -339,7 +334,7 @@ export default function Main() {
             R. Conselheiro Saraiva, 207 - Santana, São Paulo - SP, 02037-020
           </span>
         </div>
-        {/**Carrossel de imagens localização */}
+
         <div className="overflow-hidden w-full relative h-[220px] lg:h-[280px]">
           <div className="carousel-track">
             {loop.map((src, i) => (
