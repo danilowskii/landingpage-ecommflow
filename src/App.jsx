@@ -76,7 +76,7 @@ export default function Main() {
 
           <div className="flex px-4 md:px-10 flex-col items-center relative inset-0 z-20 w-full text-white/90 text-xl">
             <img
-              className="w-24 md:w-32 mx-auto h-auto py-10 flex self-center"
+              className="w-24 md:w-32 mx-auto h-auto pt-7 pb-5 flex self-center"
               src={logoWhiteEcomm}
               alt="Logo Ecomm Flow"
             />
@@ -179,7 +179,7 @@ export default function Main() {
           </div>
         </div>
         <ScrollRevealFromBottom>
-          <h2 className="text-white/90 gap-2 font-bold text-center text-4xl sm:text-5xl py-10">
+          <h2 className="text-white/90 gap-2 font-bold text-center text-4xl sm:text-5xl py-5 md:py-10">
             Antes e depois da{" "}
             <span className="font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
               Ecomm Flow

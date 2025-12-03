@@ -2,7 +2,7 @@ export default function Comparison() {
   return (
     <section className="relative w-full pb-10 text-white/90 font-montserrat">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-10">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-8 md:mb-10">
           O que você{" "}
           <span className="bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
             prefere?
