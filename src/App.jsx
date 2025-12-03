@@ -74,6 +74,18 @@ export default function Main() {
 
   const link = getLink();
 
+  const handleTrackPixel = () => {
+    const optionEduzzText = "Sou iniciante e quero começar do zero";
+
+    if (selectedQuestion !== optionEduzzText) {
+      if (typeof window.fbq === "function") {
+        window.fbq("track", "Contact", {
+          content_name: "Lead Site - Whatsapp",
+        });
+      }
+    }
+  };
+
   const handleSelection = (questionText) => {
     setSelectedQuestion(questionText);
   };
@@ -83,7 +95,12 @@ export default function Main() {
       <Questions onConfirmSelection={handleSelection} />
 
       <div className="max-w-36 hover:scale-110 transition-all duration-300 z-50 sm:max-w-44 fixed bottom-5 right-[-25px] sm:right-0">
-        <a target="_blank" href={link} rel="noopener noreferrer">
+        <a
+          target="_blank"
+          onClick={handleTrackPixel}
+          href={link}
+          rel="noopener noreferrer"
+        >
           <Whastapp />
         </a>
       </div>
@@ -248,7 +265,7 @@ export default function Main() {
                 </p>
               </h3>
               <div className="">
-                <Services customLink={link} />
+                <Services customLink={link} onTrackPixel={handleTrackPixel} />
               </div>
               <p className="text-white/90 max-w-[95%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl pt-10 justify-center">
                 Nós fazemos todo o processo do{" "}
@@ -315,7 +332,12 @@ export default function Main() {
           </ScrollRevealFromBottom>
         </div>
         <div className="flex justify-center text-xl md:text-2xl items-center pb-10">
-          <a target="_blank" href={link} rel="noopener noreferrer">
+          <a
+            target="_blank"
+            href={link}
+            onClick={handleTrackPixel}
+            rel="noopener noreferrer"
+          >
             <Button variant="primary">Quero garantir agora!</Button>
           </a>
         </div>
@@ -366,7 +388,7 @@ export default function Main() {
         ></iframe>
       </section>
 
-      <Footer customLink={link} />
+      <Footer customLink={link} onTrackPixel={handleTrackPixel} />
     </main>
   );
 }

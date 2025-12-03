@@ -24,6 +24,7 @@ const ArrowIcon = ({ delay }) => (
 
 export default function Services({
   customLink = "Olá, vim do site e gostaria de informações sobre a assessoria Ecomm Flow. #ECOMMFLOW",
+  onTrackPixel,
 }) {
   const link = customLink;
   const ourServices = [
@@ -60,7 +61,7 @@ export default function Services({
               {index + 1}
             </div>
             <div className="relative hover:scale-110 flex hover:shadow-[0px_0px_20px_rgba(10,185,209,0.3)] rounded-lg transition-all duration-300 h-full">
-              <a target="_blank" href={link}>
+              <a target="_blank" onClick={onTrackPixel} href={link}>
                 <GlareHover>
                   <div className="relative group h-32 flex items-center justify-center flex-col md:gap-4 text-center p-3 cursor-pointer">
                     <img

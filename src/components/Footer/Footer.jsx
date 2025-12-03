@@ -57,6 +57,7 @@ const PhoneIcon = ({ className = "w-6 h-6" }) => (
 
 export default function Footer({
   customLink = "Olá, vim do site e gostaria de informações sobre a assessoria Ecomm Flow. #ECOMMFLOW",
+  onTrackPixel,
 }) {
   const link = customLink;
   return (
@@ -66,7 +67,9 @@ export default function Footer({
           <div className="flex flex-col gap-4 items-center text-center justify-center">
             <a
               className="flex pb self-center"
-              href="https://wa.me/5511966052171?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20assessoria%20Ecommflow...%20%23ECOMMFLOW"
+              onClick={onTrackPixel}
+              target="_blank"
+              href={link}
             >
               <img
                 src={logoEcomm}
@@ -108,6 +111,7 @@ export default function Footer({
                 <a
                   target="_blank"
                   href={link}
+                  onClick={onTrackPixel}
                   className="hover:text-[#0ab9d1] transition-colors"
                 >
                   Contato
@@ -123,6 +127,7 @@ export default function Footer({
                 <a
                   href={link}
                   target="_blank"
+                  onClick={onTrackPixel}
                   className="hover:text-[#0ab9d1] flex gap-2 transition-colors"
                 >
                   <WhatsAppIcon /> WhatsApp
@@ -148,6 +153,7 @@ export default function Footer({
               <a
                 target="_blank"
                 href={link}
+                onClick={onTrackPixel}
                 className="hover:text-[#0ab9d1] flex gap-2 transition-colors"
               >
                 <PhoneIcon /> Tel: (11) 96605-2171
