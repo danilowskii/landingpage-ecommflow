@@ -8,7 +8,7 @@ import meli from "./assets/ml.png";
 import LogoLoop from "./components/SlideLogos/SlideLogo";
 import Services from "./components/Services";
 import equipe from "./assets/timeEcomm.svg";
-import Footer from "./components/Footer/";
+import Footer from "./components/Footer";
 import Particles from "./components/Particles";
 import Whastapp from "./components/Whatsapp";
 import plus from "./assets/plus.png";
@@ -21,7 +21,8 @@ import space3 from "./assets/space3.png";
 import space4 from "./assets/space4.png";
 import space5 from "./assets/space5.png";
 import Comparison from "./components/Comparison/";
-import Testimonials from "./components/Testimonials/";
+import Testimonials from "./components/Testimonials";
+import Questions from "./components/Questions";
 
 export default function Main() {
   const [selectedQuestion, setSelectedQuestion] = useState("");
@@ -56,18 +57,31 @@ export default function Main() {
     },
   ];
 
-  const mensagem = `Olá, vim do site e gostaria de informações sobre a assessoria Ecommflow. ${selectedQuestion} #ECOMMFLOW`;
+  // Lógica para montar a mensagem baseada na escolha do Pop-up
+  const mensagem = selectedQuestion
+    ? `Olá, vim do site e gostaria de informações sobre a assessoria Ecommflow. ${selectedQuestion} #ECOMMFLOW`
+    : "Olá, vim do site e gostaria de informações sobre a assessoria Ecommflow. #ECOMMFLOW";
 
   const link =
     "https://wa.me/5511966052171?text=" + encodeURIComponent(mensagem);
 
+  // Função que recebe o dado do componente Questions
+  const handleSelection = (questionText) => {
+    setSelectedQuestion(questionText);
+  };
+
   return (
     <main className="bg-black ">
+      {/* --- POP-UP INTEGRADO AQUI --- */}
+      <Questions onConfirmSelection={handleSelection} />
+
+      {/* Botão Flutuante do WhatsApp */}
       <div className="max-w-36 hover:scale-110 transition-all duration-300 z-50 sm:max-w-44 fixed bottom-5 right-[-25px] sm:right-0">
-        <a target="_blank" href={link}>
+        <a target="_blank" href={link} rel="noopener noreferrer">
           <Whastapp />
         </a>
       </div>
+
       <section id="inicio" className="md:pb-20 relative">
         <div className="">
           {/*<div className="relative inset-0 h-[400px] overflow-hidden flex mx-auto bg-linear-to-t from-black to-[#010e1d]">
@@ -295,7 +309,7 @@ export default function Main() {
           </ScrollRevealFromBottom>
         </div>
         <div className="flex justify-center text-xl md:text-2xl items-center pb-10">
-          <a target="_blank" href={link}>
+          <a target="_blank" href={link} rel="noopener noreferrer">
             <Button variant="primary">Quero garantir agora!</Button>
           </a>
         </div>

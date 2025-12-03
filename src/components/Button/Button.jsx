@@ -17,12 +17,12 @@ const changeVariant = (variant) => {
   }
 };
 
-function Button({ children, variant = "primary", ...props }) {
+function Button({ children, variant = "primary", className = "", ...props }) {
   const variantClasses = changeVariant(variant);
   const baseClasses =
     "p-4 transition-colors  rounded-full cursor-pointer font-semibold font-montserrat focus:outline-none group";
 
-  const combinedClasses = `${baseClasses} ${variantClasses}`;
+  const combinedClasses = `${baseClasses} ${variantClasses} ${className}`;
 
   return (
     <button className={combinedClasses} {...props}>

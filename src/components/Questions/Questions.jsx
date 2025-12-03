@@ -1,35 +1,67 @@
-import Particles from "../Particles";
-import Button from "../Button";
-import { useState } from "react";
+import Button from "../Button/Button.jsx";
+import { useState, useEffect } from "react";
 
-export default function Questions({ onSelect }) {
+// Ícone de Fechar (X)
+const CloseIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={2}
+    stroke="currentColor"
+    className="w-6 h-6 text-gray-400 hover:text-white transition-colors"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M6 18L18 6M6 6l12 12"
+    />
+  </svg>
+);
+
+export default function Questions({ onConfirmSelection }) {
+  const [isOpen, setIsOpen] = useState(false);
   const [selectedQuestion, setSelectedQuestion] = useState("");
-  const message = selectedQuestion
-    ? `Oi, vim do site e gostaria de informações sobre a assessoria Ecommflow... ${selectedQuestion} #ECOMMFLOW`
-    : "Oi, vim do site e gostaria de informações sobre a assessoria Ecommflow... #ECOMMFLOW";
 
-  const whatsappLink = `https://wa.me/5511966052171?text=${encodeURIComponent(
-    message
-  )}`;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 6000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleConfirm = () => {
+    if (selectedQuestion) {
+      onConfirmSelection(selectedQuestion);
+      setIsOpen(false);
+    }
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  if (!isOpen) return null;
 
   const questions = [
     {
       id: 1,
       text: "Sou iniciante e quero começar do zero",
-      question: (
+      label: (
         <>
           Sou iniciante e quero começar{" "}
-          <span className="font-bold  text-[#00e1ff]">do zero</span>
+          <span className="font-bold text-[#00e1ff]">do zero</span>
         </>
       ),
     },
     {
       id: 2,
       text: "Sou iniciante e tenho mais de R$30.000 para investir",
-      question: (
+      label: (
         <>
           Sou iniciante e tenho mais de{" "}
-          <span className="font-bold  text-[#00e1ff]">R$30.000</span> para
+          <span className="font-bold text-[#00e1ff]">R$30.000</span> para
           investir
         </>
       ),
@@ -37,132 +69,110 @@ export default function Questions({ onSelect }) {
     {
       id: 3,
       text: "Já faturo acima de R$30.000",
-      question: (
+      label: (
         <>
           Já faturo acima de{" "}
-          <span className="font-bold  text-[#00e1ff]">R$30.000</span>
+          <span className="font-bold text-[#00e1ff]">R$30.000</span>
         </>
       ),
     },
     {
       id: 4,
       text: "Já faturo acima de R$50.000",
-      question: (
+      label: (
         <>
           Já faturo acima de{" "}
-          <span className="font-bold  text-[#00e1ff]">R$50.000</span>
+          <span className="font-bold text-[#00e1ff]">R$50.000</span>
         </>
       ),
     },
     {
       id: 5,
       text: "Já faturo acima de R$100.000",
-      question: (
+      label: (
         <>
           Já faturo acima de{" "}
-          <span className="font-bold  text-[#00e1ff]">R$100.000</span>
+          <span className="font-bold text-[#00e1ff]">R$100.000</span>
         </>
       ),
     },
     {
       id: 6,
       text: "Já faturo acima de R$500.000",
-      question: (
+      label: (
         <>
           Já faturo acima de{" "}
-          <span className="font-bold  text-[#00e1ff]">R$500.000</span>
+          <span className="font-bold text-[#00e1ff]">R$500.000</span>
         </>
       ),
     },
     {
       id: 7,
       text: "Já faturo acima de R$1.000.000",
-      question: (
+      label: (
         <>
           Já faturo acima de{" "}
-          <span className="font-bold  text-[#00e1ff]">R$1.000.000</span>
+          <span className="font-bold text-[#00e1ff]">R$1.000.000</span>
         </>
       ),
     },
   ];
 
   return (
-    <div
-      className="relative z-0 inset-0  
-    "
-    >
-      <div className="absolute inset-0 z-0 opacity-40 flex mx-auto object-cover">
-        <div
-          style={{
-            width: "100%",
-            height: "100svh",
-            position: "relative",
-          }}
+    // Overlay Escuro (Fundo)
+    <div className="fixed inset-0 z-999 flex items-center justify-center bg-black/80 backdrop-blur-sm px-4">
+      {/* Caixa do Modal */}
+      <div className="relative w-full max-w-lg rounded-2xl border border-white/20 bg-[#0f172a] p-6 shadow-2xl md:p-8">
+        {/* Botão Fechar (X) */}
+        <button
+          onClick={handleClose}
+          className="absolute right-4 top-4 p-1 hover:bg-white/10 rounded-full transition-all"
         >
-          <Particles
-            particleColors={["#0ab9d1", "#fff"]}
-            particleCount={200}
-            particleSpread={10}
-            speed={0.1}
-            particleBaseSize={100}
-            moveParticlesOnHover={false}
-            alphaParticles={false}
-            disableRotation={false}
-          />
-        </div>
-      </div>
-      <div className="text-white max-w-[95%] border-white/20 gap-8 border mx-auto rounded-xl relative text-xl justify-center items-center overflow-hidden py-10 px-10 flex flex-col gap-5 md:flex-row mt-[465px] md:mt-[400px]">
-        <div className="-z-10 absolute right-1/4 top-1/3">
-          <div className="w-96 h-52 bg-sky-700/90 absolute bottom-0 right-2/3 top-0 filter z-0 blur-[150px] rounded-full"></div>
+          <CloseIcon />
+        </button>
 
-          <div className="w-96 h-52 bg-blue-900/90 absolute right-1/2 top-0 filter z-0 blur-[150px] rounded-full"></div>
-          <div className="w-96 h-52 bg-white/60 absolute left-1/4 top-1/4 filter z-0 blur-[150px] rounded-full"></div>
+        {/* Título */}
+        <div className="mb-6 text-center">
+          <h2 className="text-xl font-medium text-white md:text-2xl">
+            Receba a{" "}
+            <span className="text-[#00e1ff] font-bold">estratégia certa</span>{" "}
+            para evoluir mais rápido
+          </h2>
         </div>
-        <div className="w-96 h-52 bg-sky-700/50 absolute top-0 left-0 filter z-0 blur-[150px] rounded-full"></div>
-        <div className="w-96 h-52 bg-white/70 absolute bottom-1/4 left-1/12 filter z-0 blur-[150px] rounded-full"></div>
 
-        <div className="flex flex-col z-10">
-          <div className="pb-5 ">
-            <h1 className="text-2xl font-medium">
-              Receba a{" "}
-              <span className="text-[#00e1ff] font-bold">estratégia certa</span>{" "}
-              para evoluir mais rápido
-            </h1>
-          </div>
-          {questions.map((question) => (
-            <div
-              key={question.id}
-              className="flex flex-row w-fit py-2 transition-transform ease-out items-center cursor-pointer "
+        {/* Lista de Perguntas */}
+        <div className="flex flex-col gap-2 max-h-[50vh] overflow-y-auto pr-2 custom-scrollbar">
+          {questions.map((q) => (
+            <label
+              key={q.id}
+              className={`flex cursor-pointer items-center gap-3 rounded-lg border p-3 transition-all hover:bg-white/5 ${
+                selectedQuestion === q.text
+                  ? "border-[#00e1ff] bg-white/5"
+                  : "border-white/10"
+              }`}
             >
-              <div className="hover:translate-x-2 transition-all">
-                <input
-                  name="level"
-                  type="radio"
-                  id={question.id.toString()}
-                  onClick={() => {
-                    onSelect(question.text), setSelectedQuestion(question.text);
-                  }}
-                  className="cursor-pointer "
-                />
-
-                <label
-                  htmlFor={question.id.toString()}
-                  className="ml-2 text-base cursor-pointer"
-                >
-                  {question.question}
-                </label>
-              </div>
-            </div>
+              <input
+                type="radio"
+                name="popup-level"
+                className="accent-[#00e1ff] w-5 h-5"
+                checked={selectedQuestion === q.text}
+                onChange={() => setSelectedQuestion(q.text)}
+              />
+              <span className="text-sm text-gray-200 md:text-base">
+                {q.label}
+              </span>
+            </label>
           ))}
-          <div className="pt-5 text-nowrap flex justify-center md:justify-start items-start">
-            <a
-              className=""
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
+        </div>
+
+        <div className="mt-6 flex justify-center">
+          <div onClick={handleConfirm} className="w-full flex sm:w-auto">
+            <Button
+              variant="primary"
+              className="w-full px-20 flex justify-center"
             >
-              <Button variant="primary">Falar com um especialista</Button>
-            </a>
+              Confirmar
+            </Button>
           </div>
         </div>
       </div>
