@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content; /* ADICIONE ISSO: Garante que a largura seja a soma dos itens */
+  gap: 0; /* Garante que não haja espaçamento extra não calculado */
+  animation: scrollInfinite 60s linear infinite;
+
+  /* Melhora performance e evita "flicker" */
+  will-change: transform;
+}
+
+/* O resto permanece igual */
+@keyframes scrollInfinite {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+  .ajuste-s8 {
+    transform: translateY(7%); /* mais estável que margin-top gigante */
+    /* ou usar um valor fixo menor:
+       margin-top: -6rem;
+    */
+  }
+}
