@@ -35,7 +35,7 @@ export default function Services({
     },
     {
       img: exam,
-      desc: "Otimizamos seus anúncios",
+      desc: "Otimizamos Seus Anúncios",
       desc2:
         "Títulos estratégicos, categoria correta e ficha técnica otimizada com as melhores palavras-chave",
     },
