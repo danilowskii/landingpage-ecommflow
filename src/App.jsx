@@ -76,42 +76,46 @@ export default function Main() {
 
           <div className="flex px-4 md:px-10 flex-col items-center relative inset-0 z-20 w-full text-white/90 text-xl">
             <img
-              className="w-40 mx-auto h-auto py-10 flex self-center"
+              className="w-24 md:w-32 mx-auto h-auto py-10 flex self-center"
               src={logoWhiteEcomm}
               alt="Logo Ecomm Flow"
             />
             <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-7xl mx-auto">
               <div className="flex flex-col w-full md:w-1/2 justify-center md:pr-10">
-                <p className="md:text-5xl text-4xl pb-10 md:pb-0 font-bold font-montserrat text-center md:text-left">
+                <p className="md:text-5xl text-3xl pb-10 md:pb-0 font-bold font-montserrat text-center md:text-left">
                   Seu marketplace poderia
                   <span className="mx-2 font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                     vender muito mais
                   </span>
                   e você não precisa fazer sozinho
                 </p>
-                <p className="pb-10 sm:py-10 text-2xl sm:text-2xl font-semibold px-4 md:px-0 text-center md:text-left">
+                <div className="md:hidden pb-10">
+                  <iframe
+                    src="https://www.youtube.com/embed/2zjr6BTEOrc?si=MZG7RMzaOEeM1qnO"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    className="rounded shadow-[0px_0px_10px_rgba(0,0,0,1)] w-full aspect-video max-w-[657px]"
+                  ></iframe>
+                </div>
+                <p className="pb-10 sm:py-10 text-xl sm:text-2xl font-semibold px-4 md:px-0 text-center md:text-left">
                   Nós colocamos a{" "}
                   <span className=" font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                     mão na massa
                   </span>{" "}
-                  dentro da sua conta, aplicando as mesmas estratégias usadas
-                  pelos{" "}
-                  <span className="font-bold mr-2 bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
-                    vendedores que mais faturam.
-                  </span>
-                  Você foca no negócio e nós cuidamos do operacional
+                  em seu marketplace e você cuida das estratégias
                 </p>
               </div>
 
-              <div className="z-10 w-full md:w-1/2 flex justify-center items-center flex-col py-10 md:py-0">
+              <div className="z-10 w-full md:w-1/2 flex justify-center items-center flex-col md:py-10 md:py-0">
                 <iframe
                   src="https://www.youtube.com/embed/2zjr6BTEOrc?si=MZG7RMzaOEeM1qnO"
                   title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
-                  className="rounded shadow-[0px_0px_10px_rgba(0,0,0,1)] w-full aspect-video max-w-[657px]"
+                  className="rounded hidden md:flex shadow-[0px_0px_10px_rgba(0,0,0,1)] w-full aspect-video max-w-[657px]"
                 ></iframe>
-                <div className="flex flex-row gap-3 sm:gap-8 justify-center  w-full max-w-7xl mx-auto mt-8">
+                <div className="flex flex-row gap-3 sm:gap-8 justify-center w-full max-w-7xl mx-auto md:mt-8">
                   <a className="text-sm sm:text-xl" href="#services">
                     <Button variant="secondary">
                       <img
@@ -183,18 +187,12 @@ export default function Main() {
           </h2>
           <BeforeAfter />
           <p className="text-white/90 max-w-[95%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl py-10 justify-center">
-            Nossos{" "}
-            <span className="text-[#0ab9d1] font-bold">
-              designs estratégicos
-            </span>{" "}
-            unem estética e performance, transformando cada anúncio em uma
-            oportunidade de venda. Uma{" "}
-            <span className="text-[#0ab9d1] font-bold">apresentação forte</span>{" "}
-            e<span className="text-[#0ab9d1] font-bold"> coerente</span> que{" "}
-            <span className="text-[#0ab9d1] font-bold">
-              diferencia sua marca
-            </span>{" "}
-            no marketplace
+            Transformamos seus anúncios em{" "}
+            <span className="font-bold text-[#0ab9d1]">máquinas de venda,</span>{" "}
+            com designs estratégicos que{" "}
+            <span className="font-bold text-[#0ab9d1]">
+              aumentam sua conversão
+            </span>
           </p>
         </ScrollRevealFromBottom>
       </section>
@@ -223,7 +221,7 @@ export default function Main() {
           </div>
           <div className="z-50 overflow-hidden">
             <ScrollRevealFromBottom>
-              <h3 className="text-white/90 gap-2 font-bold flex justify-center text-4xl sm:text-5xl  py-20">
+              <h3 className="text-white/90 gap-2 font-bold flex justify-center text-4xl sm:text-5xl py-10">
                 Nossos{" "}
                 <p className="font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent pb-2">
                   Serviços
@@ -232,16 +230,12 @@ export default function Main() {
               <div className="">
                 <Services />
               </div>
-              <p className="text-white/90 max-w-[95%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl py-10 justify-center">
-                Estruturamos seus anúncios e produtos para que funcionem de
+              <p className="text-white/90 max-w-[95%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl pt-10 justify-center">
+                Nós fazemos todo o processo do{" "}
                 <span className="px-1 font-bold text-[#0ab9d1]">
-                  forma mais clara e eficiente.
+                  anúncio, promoção e ADS.
                 </span>{" "}
-                Simplificamos processos e{" "}
-                <span className="px-1 font-bold text-[#0ab9d1]">
-                  elevamos a performance do seu marketplace,
-                </span>
-                fortalecendo a confiança dos clientes
+                Você só se preocupa em administrar as vendas e achar produtos
               </p>
             </ScrollRevealFromBottom>
           </div>
@@ -300,7 +294,7 @@ export default function Main() {
             <Comparison />
           </ScrollRevealFromBottom>
         </div>
-        <div className="flex justify-center text-2xl items-center pb-10">
+        <div className="flex justify-center text-xl md:text-2xl items-center pb-10">
           <a target="_blank" href={link}>
             <Button variant="primary">Quero garantir agora!</Button>
           </a>

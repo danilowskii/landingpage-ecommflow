@@ -1,8 +1,6 @@
 import GlareHover from "../GlareHover";
-import add from "../../assets/add.png";
 import exam from "../../assets/exam.png";
 import webDesign from "../../assets/web-design.png";
-import marketAnalysis from "../../assets/market-analysis.png";
 import ads from "../../assets/social-media-marketing.png";
 import catalog from "../../assets/winner.png";
 
@@ -54,8 +52,11 @@ export default function Services() {
     <div className="flex justify-center">
       <div className="relative max-w-[1080px] grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-10 px-4">
         {ourServices.map((service, index) => (
-          <div key={index} className="relative  group-wrapper">
-            <div className="hover:scale-110 flex hover:shadow-[0px_0px_20px_rgba(10,185,209,0.3)] rounded-lg transition-all duration-300 h-full">
+          <div key={index} className="relative group group-wrapper">
+            <div className="absolute -top-3 -left-2 z-20 flex h-8 w-8 items-center justify-center rounded-full bg-black text-sm group-hover:scale-110 transition-all font-semibold text-[#00e1ff] shadow-lg md:hidden">
+              {index + 1}
+            </div>
+            <div className="relative hover:scale-110 flex hover:shadow-[0px_0px_20px_rgba(10,185,209,0.3)] rounded-lg transition-all duration-300 h-full">
               <a
                 target="_blank"
                 href="https://wa.me/5511966052171?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20assessoria%20Ecommflow...%20%23ECOMMFLOW"
@@ -67,11 +68,12 @@ export default function Services() {
                       className="w-12 group-hover:opacity-0 transition-all duration-300"
                       alt={service.desc}
                     />
+
                     <span className="text-md font-semibold font-montserrat transition-all duration-300 group-hover:opacity-0">
                       {service.desc}
                     </span>
 
-                    <span className="absolute p-4 text-base hover:text-[#00e1ff] inset-0 font-semibold font-montserrat flex items-center justify-center text-gray-200 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                    <span className="absolute p-4 text-sm md:text-base hover:text-[#00e1ff] inset-0 font-semibold font-montserrat flex items-center justify-center text-gray-200 opacity-0 transition-all duration-300 group-hover:opacity-100">
                       {service.desc2}
                     </span>
                   </div>

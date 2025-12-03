@@ -1,8 +1,8 @@
 export default function Comparison() {
   return (
-    <section className="relative w-full py-10 text-white/90 font-montserrat">
+    <section className="relative w-full pb-10 text-white/90 font-montserrat">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-10">
           O que você{" "}
           <span className="bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
             prefere?
@@ -52,7 +52,7 @@ export default function Comparison() {
             </div>
 
             <div className="mt-8 pt-6 border-t border-red-500/30 text-center">
-              <p className="text-red-300 font-semibold flex items-center justify-center gap-2">
+              <p className="text-red-300 font-semibold flex items-center text-sm justify-center gap-2">
                 <span className="text-xl">⚠️</span> + Risco de processo
                 trabalhista
               </p>
@@ -70,11 +70,11 @@ export default function Comparison() {
               <span className="text-[#00e1ff]">✓</span> Contratar a Ecomm Flow
             </h3>
 
-            <div className="flex-1 flex flex-col justify-center items-center text-center py-0">
+            <div className="flex-1 flex flex-col justify-center items-center text-center">
               <p className="text-lg text-gray-300 mb-2">Investimento de</p>
 
               <div className="relative">
-                <h4 className="text-4xl md:text-6xl font-extrabold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent leading-tight py-2">
+                <h4 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent leading-tight py-2">
                   Bem MENOS
                 </h4>
 
@@ -83,13 +83,13 @@ export default function Comparison() {
                 </span>
               </div>
 
-              <p className="text-2xl md:text-3xl font-bold text-white mt-2">
+              <p className="text-xl md:text-3xl font-bold text-white mt-2">
                 que <span className="text-[#00e1ff]">1/2</span> Colaborador
               </p>
             </div>
 
             <div className="mt-8 pt-6 border-t border-[#00e1ff]/30 text-center">
-              <p className="text-blue-100 font-medium flex items-center justify-center gap-2">
+              <p className="text-blue-100 font-medium flex items-center justify-center text-sm gap-2">
                 <span className="text-xl">🚀</span>
                 <span>
                   + Equipe profissional, treinada pelo{" "}

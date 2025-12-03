@@ -69,16 +69,10 @@ export default function Testimonials() {
       alt: "Depoimento CEO",
       label: "Aumento Faturamento",
     },
-    {
-      type: "image",
-      src: printWhatsapp,
-      alt: "Print de Whatsapp",
-      label: "Feedback Whatsapp",
-    },
   ];
 
   return (
-    <section className="py-20 bg-black relative w-full overflow-hidden">
+    <section className="py-10 bg-black relative w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center">
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-12 font-montserrat text-center">
           Veja o que nossos{" "}
@@ -90,9 +84,9 @@ export default function Testimonials() {
         <div
           className="
             w-full flex gap-4 
-            overflow-x-auto snap-x snap-mandatory pb-8 
+            overflow-x-auto  pb-8 flex-wrap justify-center
             md:overflow-visible md:flex-row md:justify-center md:flex-wrap lg:flex-nowrap
-            scrollbar-hide px-4 md:px-0
+            scrollbar-hide md:px-0
         "
         >
           {testimonials.map((item, index) => (
@@ -100,8 +94,8 @@ export default function Testimonials() {
               key={index}
               onClick={() => setSelectedFeature(item)}
               className="
-                  relative shrink-0 snap-center 
-                  w-[260px] h-[460px] md:w-[220px] md:h-[400px] lg:w-60 lg:h-[420px]
+                  relative 
+                  w-[150px] h-[280px] md:w-[220px] md:h-[400px] lg:w-60 lg:h-[420px]
                   rounded-2xl overflow-hidden border border-white/10 group
                   transition-all duration-500 cursor-pointer 
                   hover:scale-105 hover:border-[#00e1ff]/50 hover:shadow-[0_0_20px_rgba(0,225,255,0.2)]
@@ -132,12 +126,6 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="flex md:hidden gap-2 mt-4">
-          <p className="text-white/40 text-sm animate-pulse flex items-center gap-2">
-            Deslize para ver mais &rarr;
-          </p>
         </div>
       </div>
 
