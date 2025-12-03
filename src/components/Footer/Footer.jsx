@@ -131,7 +131,7 @@ export default function Footer() {
               </p>
               <p className="">
                 <a
-                  href="https://wa.me/5511966052171"
+                  href="https://www.instagram.com/ecomm.flow"
                   target="_blank"
                   className="hover:text-[#0ab9d1] flex gap-2 transition-colors"
                 >
