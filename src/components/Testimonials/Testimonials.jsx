@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import reformAnun from "../../assets/reformAnun.svg";
 import reformAnunVideo from "../../assets/reformAnunVideo.mp4";
 import printWhatsapp from "../../assets/printWhatsapp.svg";
+import printWhatsapp1 from "../../assets/printWhatsapp1.svg";
 import aumentFaturVideo from "../../assets/aumentFatur.mp4";
 import aumentFatur from "../../assets/aumentFatur.svg";
 
@@ -45,9 +46,9 @@ export default function Testimonials() {
   const testimonials = [
     {
       type: "image",
-      src: printWhatsapp,
+      src: printWhatsapp1,
       alt: "Resultado de vendas",
-      label: "Faturamento Recorde",
+      label: "Qualidade Garantida",
     },
     {
       type: "video",

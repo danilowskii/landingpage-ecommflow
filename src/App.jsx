@@ -57,12 +57,22 @@ export default function Main() {
     },
   ];
 
-  const mensagem = selectedQuestion
-    ? `Olá, vim do site e gostaria de informações sobre a assessoria Ecommflow. ${selectedQuestion} #ECOMMFLOW`
-    : "Olá, vim do site e gostaria de informações sobre a assessoria Ecommflow. #ECOMMFLOW";
+  const getLink = () => {
+    const optionEduzzText = "Sou iniciante e quero começar do zero";
+    const linkEduzz = "https://chk.eduzz.com/2117516?a=20462735";
 
-  const link =
-    "https://wa.me/5511966052171?text=" + encodeURIComponent(mensagem);
+    if (selectedQuestion === optionEduzzText) {
+      return linkEduzz;
+    }
+
+    const message = selectedQuestion
+      ? `Olá, vim do site e gostaria de informações sobre a assessoria Ecomm Flow. ${selectedQuestion} #ECOMMFLOW`
+      : "Olá, vim do site e gostaria de informações sobre a assessoria Ecomm Flow. #ECOMMFLOW";
+
+    return "https://wa.me/5511966052171?text=" + encodeURIComponent(message);
+  };
+
+  const link = getLink();
 
   const handleSelection = (questionText) => {
     setSelectedQuestion(questionText);
@@ -125,7 +135,7 @@ export default function Main() {
                   referrerPolicy="strict-origin-when-cross-origin"
                   className="rounded hidden md:flex shadow-[0px_0px_10px_rgba(0,0,0,1)] w-full aspect-video max-w-[657px]"
                 ></iframe>
-                <div className="flex flex-row gap-3 sm:gap-8 justify-center w-full max-w-7xl mx-auto md:mt-8">
+                <div className="flex md:hidden flex-row gap-3 sm:gap-8 justify-center w-full max-w-7xl mx-auto md:mt-8">
                   <a className="text-sm sm:text-xl" href="#services">
                     <Button variant="secondary">
                       <img
@@ -141,7 +151,7 @@ export default function Main() {
             </div>
 
             <div className="w-full max-w-7xl mx-auto text-center">
-              <p className="py-10 sm:text-2xl max-w-full font-semibold inline-block">
+              <p className="py-5 sm:text-2xl max-w-full font-semibold inline-block">
                 Atendemos os{" "}
                 <span className="font-bold bg-linear-to-r from-blue-500 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                   principais marketplaces
@@ -238,7 +248,7 @@ export default function Main() {
                 </p>
               </h3>
               <div className="">
-                <Services />
+                <Services customLink={link} />
               </div>
               <p className="text-white/90 max-w-[95%] mx-auto text-center font-semibold sm:max-w-[50%] text-xl pt-10 justify-center">
                 Nós fazemos todo o processo do{" "}
@@ -356,7 +366,7 @@ export default function Main() {
         ></iframe>
       </section>
 
-      <Footer />
+      <Footer customLink={link} />
     </main>
   );
 }

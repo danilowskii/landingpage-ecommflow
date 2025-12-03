@@ -55,17 +55,7 @@ export default function Questions({ onConfirmSelection }) {
         </>
       ),
     },
-    {
-      id: 2,
-      text: "Sou iniciante e tenho mais de R$30.000 para investir",
-      label: (
-        <>
-          Sou iniciante e tenho mais de{" "}
-          <span className="font-bold text-[#00e1ff]">R$30.000</span> para
-          investir
-        </>
-      ),
-    },
+
     {
       id: 3,
       text: "Já faturo acima de R$30.000",

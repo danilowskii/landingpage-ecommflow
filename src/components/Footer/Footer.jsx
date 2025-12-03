@@ -55,11 +55,10 @@ const PhoneIcon = ({ className = "w-6 h-6" }) => (
   </svg>
 );
 
-export default function Footer() {
-  const mensagem = `Oi, vim do site e gostaria de informações sobre a assessoria Ecommflow. #ECOMMFLOW`;
-
-  const link =
-    "https://wa.me/5511966052171?text=" + encodeURIComponent(mensagem);
+export default function Footer({
+  customLink = "Olá, vim do site e gostaria de informações sobre a assessoria Ecomm Flow. #ECOMMFLOW",
+}) {
+  const link = customLink;
   return (
     <div>
       <footer className="bg-black text-white py-12 px-6">
@@ -122,7 +121,7 @@ export default function Footer() {
             <div className="flex justify-center items-start flex-col gap-3">
               <p className="">
                 <a
-                  href="https://wa.me/5511966052171"
+                  href={link}
                   target="_blank"
                   className="hover:text-[#0ab9d1] flex gap-2 transition-colors"
                 >

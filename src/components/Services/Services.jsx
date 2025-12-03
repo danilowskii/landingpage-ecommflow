@@ -22,7 +22,10 @@ const ArrowIcon = ({ delay }) => (
   </svg>
 );
 
-export default function Services() {
+export default function Services({
+  customLink = "Olá, vim do site e gostaria de informações sobre a assessoria Ecomm Flow. #ECOMMFLOW",
+}) {
+  const link = customLink;
   const ourServices = [
     {
       img: webDesign,
@@ -53,14 +56,11 @@ export default function Services() {
       <div className="relative max-w-[1080px] grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-10 px-4">
         {ourServices.map((service, index) => (
           <div key={index} className="relative group group-wrapper">
-            <div className="absolute -top-3 -left-2 z-20 flex h-8 w-8 items-center justify-center rounded-full bg-black text-sm group-hover:scale-110 transition-all font-semibold text-[#00e1ff] shadow-lg md:hidden">
+            <div className="absolute -top-3 -left-4 z-20 flex h-8 w-8 md:w-10 md:h-10 md:text-[20px] items-center justify-center rounded-full bg-black text-sm group-hover:scale-110 transition-all font-semibold text-[#00e1ff] shadow-lg ">
               {index + 1}
             </div>
             <div className="relative hover:scale-110 flex hover:shadow-[0px_0px_20px_rgba(10,185,209,0.3)] rounded-lg transition-all duration-300 h-full">
-              <a
-                target="_blank"
-                href="https://wa.me/5511966052171?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20assessoria%20Ecommflow...%20%23ECOMMFLOW"
-              >
+              <a target="_blank" href={link}>
                 <GlareHover>
                   <div className="relative group h-32 flex items-center justify-center flex-col md:gap-4 text-center p-3 cursor-pointer">
                     <img
